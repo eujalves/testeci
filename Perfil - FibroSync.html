@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>FibroSync - Profile</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "tertiary-fixed-dim": "#2edcd7",
+                      "surface-dim": "#d9dade",
+                      "on-tertiary-fixed": "#00201f",
+                      "on-primary-container": "#faf6ff",
+                      "on-error": "#ffffff",
+                      "error-container": "#ffdad6",
+                      "surface-container-highest": "#e1e2e6",
+                      "on-tertiary-fixed-variant": "#00504e",
+                      "on-tertiary": "#ffffff",
+                      "tertiary-fixed": "#5af9f3",
+                      "on-primary-fixed-variant": "#4029ba",
+                      "on-error-container": "#93000a",
+                      "surface-bright": "#f8f9fd",
+                      "on-background": "#191c1f",
+                      "inverse-on-surface": "#eff1f5",
+                      "background": "#f8f9fd",
+                      "inverse-primary": "#c6bfff",
+                      "secondary": "#0060ac",
+                      "primary": "#5341cd",
+                      "on-surface-variant": "#474554",
+                      "secondary-fixed-dim": "#a4c9ff",
+                      "on-secondary-container": "#003e73",
+                      "on-surface": "#191c1f",
+                      "primary-fixed": "#e4dfff",
+                      "primary-container": "#6c5ce7",
+                      "secondary-fixed": "#d4e3ff",
+                      "surface-container": "#edeef2",
+                      "tertiary-container": "#007f7c",
+                      "inverse-surface": "#2e3134",
+                      "on-secondary-fixed-variant": "#004883",
+                      "surface-container-low": "#f2f3f7",
+                      "on-secondary-fixed": "#001c39",
+                      "outline-variant": "#c8c4d7",
+                      "surface": "#f8f9fd",
+                      "on-secondary": "#ffffff",
+                      "secondary-container": "#68abff",
+                      "on-tertiary-container": "#d9fffc",
+                      "surface-container-high": "#e7e8ec",
+                      "surface-container-lowest": "#ffffff",
+                      "primary-fixed-dim": "#c6bfff",
+                      "surface-variant": "#e1e2e6",
+                      "error": "#ba1a1a",
+                      "surface-tint": "#5847d2",
+                      "outline": "#787586",
+                      "on-primary-fixed": "#160066",
+                      "tertiary": "#006461",
+                      "on-primary": "#ffffff"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "0.5rem",
+                      "xl": "0.75rem",
+                      "full": "9999px"
+              },
+              "spacing": {
+                      "sm": "8px",
+                      "lg": "24px",
+                      "gutter": "24px",
+                      "xxl": "48px",
+                      "md": "16px",
+                      "xl": "32px",
+                      "margin": "32px",
+                      "xs": "4px",
+                      "unit": "4px"
+              },
+              "fontFamily": {
+                      "h2": ["Manrope"],
+                      "caption": ["Manrope"],
+                      "body-lg": ["Manrope"],
+                      "h3": ["Manrope"],
+                      "label-sm": ["Manrope"],
+                      "body-md": ["Manrope"],
+                      "h1": ["Manrope"]
+              },
+              "fontSize": {
+                      "h2": ["32px", {"lineHeight": "1.3", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+                      "caption": ["12px", {"lineHeight": "1.2", "letterSpacing": "0", "fontWeight": "500"}],
+                      "body-lg": ["18px", {"lineHeight": "1.6", "letterSpacing": "0", "fontWeight": "400"}],
+                      "h3": ["24px", {"lineHeight": "1.4", "letterSpacing": "0", "fontWeight": "600"}],
+                      "label-sm": ["14px", {"lineHeight": "1.2", "letterSpacing": "0.02em", "fontWeight": "600"}],
+                      "body-md": ["16px", {"lineHeight": "1.6", "letterSpacing": "0", "fontWeight": "400"}],
+                      "h1": ["40px", {"lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "700"}]
+              }
+            }
+          }
+        }
+    </script>
+<style>
+        /* Custom toggle styles for Tailwind without JS */
+        .toggle-checkbox:checked {
+            right: 0;
+            border-color: #6C5CE7;
+        }
+        .toggle-checkbox:checked + .toggle-label {
+            background-color: #6C5CE7;
+        }
+        .toggle-checkbox {
+            right: 0;
+            z-index: 1;
+            border-color: #e1e2e6;
+            transition: all 0.3s;
+        }
+        .toggle-label {
+            width: 48px;
+            height: 24px;
+            background-color: #e1e2e6;
+            border-radius: 9999px;
+            position: relative;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        .toggle-label:after {
+            content: '';
+            position: absolute;
+            top: 2px;
+            left: 2px;
+            width: 20px;
+            height: 20px;
+            background-color: #ffffff;
+            border-radius: 50%;
+            transition: all 0.3s;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .toggle-checkbox:checked + .toggle-label:after {
+            transform: translateX(24px);
+        }
+        
+        /* Ambient shadows */
+        .shadow-ambient-sm {
+            box-shadow: 0 2px 8px rgba(108, 92, 231, 0.04);
+        }
+        .shadow-ambient-md {
+            box-shadow: 0 4px 16px rgba(108, 92, 231, 0.06);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-background font-body-md text-body-md antialiased pb-32 pt-24 min-h-screen">
+<!-- TopAppBar -->
+<header class="bg-[#F5F6FA] dark:bg-slate-950 text-[#6C5CE7] dark:text-[#A29BFE] font-['Manrope'] font-semibold text-lg fixed top-0 w-full z-50 flex justify-between items-center px-6 h-16 border-b border-slate-200 dark:border-slate-800">
+<div class="flex items-center gap-sm">
+<img alt="User Profile Portrait" class="w-8 h-8 rounded-full object-cover border border-slate-200" data-alt="A professional headshot of a woman in her mid-30s smiling gently. She has warm features and is framed in a clean, bright studio setting with soft, high-key lighting indicative of a modern light-mode SaaS application. The color palette is neutral and approachable, avoiding harsh shadows." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCk4npbqDYfHAyvXd0axvS6TwGbBSvqEI19zRWHT_ahAyQQdipYGkzq_72IigqaCnU80kvXDCHwTinECr4P330P70EUAMRPKAHe8r0-r3z5AJOfxsd5oZ8iaFS0ogBV-Id7nktsWjPmh9wmV5Pbr8wMI8fg2kDgPauhW04Vgc4Q2X9Nmc0hDSQ7KMsM47kcG18quoI2AG4Tkii3qqkT5X_yn3Ad35RZzTXFzSfUD7gKakdi7O9erSpXxjNicA82kF3wPr4wn6KBHUA"/>
+</div>
+<div class="text-xl font-bold text-[#6C5CE7] dark:text-[#A29BFE] tracking-tight">FibroSync</div>
+<button class="hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors p-2 rounded-full flex items-center justify-center">
+<span class="material-symbols-outlined">notifications</span>
+</button>
+</header>
+<main class="max-w-3xl mx-auto px-6 lg:px-0 flex flex-col gap-xl">
+<!-- Profile Header -->
+<section class="flex flex-col items-center text-center mt-md">
+<div class="relative mb-md">
+<img alt="Ana Silva Portrait" class="w-24 h-24 rounded-full object-cover shadow-ambient-md border-4 border-surface-container-lowest" data-alt="A high-quality, professional portrait of a woman in her mid-30s named Ana Silva. She has a warm, approachable smile and natural features. The background is a very subtle, light, out-of-focus office setting, complementing a clean light-mode UI design. The lighting is soft and flattering." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAx8cBEJ3Ax5MjGUOCukMIHykwfy4lAHjIkJ1golS084PzWNuM-PXkeJYl2P_uI1leKdfI6wyJuoQH57zKeNKWOd5_O4z2pQw9sNPFz6xWdh44DtCwSljrS6bD4707gKHJkS3YvC94eLK2udYSq0v77cb51lGrmLyIY_i0ldMjlkAZMn1E61AaMPwc8fXCgowZuqqeySSpQKpo8zoNeaXjAwAbjqeVLaunjqOvfN2aAZRUcqUltSQtDBUBwYT-hP-Fl9zedMwCfu9I"/>
+<button class="absolute bottom-0 right-0 bg-primary-container text-white p-2 rounded-full shadow-md flex items-center justify-center hover:bg-surface-tint transition-colors">
+<span class="material-symbols-outlined text-[16px]">edit</span>
+</button>
+</div>
+<h1 class="font-h2 text-h2 text-on-surface">Ana Silva</h1>
+<p class="font-body-md text-body-md text-on-surface-variant mt-1">ana.silva@example.com</p>
+</section>
+<!-- Section 1: Personal Info -->
+<section>
+<h2 class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider mb-md ml-1">Personal Info</h2>
+<div class="grid grid-cols-3 gap-md">
+<div class="bg-surface-container-lowest rounded-xl p-md border border-surface-variant shadow-ambient-sm flex flex-col items-center justify-center text-center">
+<span class="material-symbols-outlined text-outline mb-2">cake</span>
+<span class="font-h3 text-h3 text-on-surface mb-1">34</span>
+<span class="font-caption text-caption text-on-surface-variant">Years Old</span>
+</div>
+<div class="bg-surface-container-lowest rounded-xl p-md border border-surface-variant shadow-ambient-sm flex flex-col items-center justify-center text-center">
+<span class="material-symbols-outlined text-outline mb-2">scale</span>
+<span class="font-h3 text-h3 text-on-surface mb-1">65</span>
+<span class="font-caption text-caption text-on-surface-variant">kg Weight</span>
+</div>
+<div class="bg-surface-container-lowest rounded-xl p-md border border-surface-variant shadow-ambient-sm flex flex-col items-center justify-center text-center bg-gradient-to-br from-surface-container-lowest to-surface-container-low">
+<span class="material-symbols-outlined text-primary-container mb-2">medical_services</span>
+<span class="font-label-sm text-label-sm text-on-surface mb-1">Fibromyalgia</span>
+<span class="font-caption text-caption text-on-surface-variant">Primary Condition</span>
+</div>
+</div>
+</section>
+<!-- Section 2: Health Preferences -->
+<section>
+<h2 class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider mb-md ml-1">Health Preferences</h2>
+<div class="bg-surface-container-lowest rounded-xl border border-surface-variant shadow-ambient-sm overflow-hidden flex flex-col">
+<div class="flex items-center justify-between p-lg border-b border-surface-variant hover:bg-surface-container-low transition-colors">
+<div class="flex items-center gap-md">
+<div class="w-10 h-10 rounded-full bg-surface-container flex items-center justify-center text-on-surface-variant">
+<span class="material-symbols-outlined">alarm</span>
+</div>
+<div>
+<p class="font-body-md text-body-md font-medium text-on-surface">Symptom reminders</p>
+<p class="font-caption text-caption text-on-surface-variant mt-1">Daily prompts to log symptoms</p>
+</div>
+</div>
+<div class="relative inline-block w-12 mr-2 align-middle select-none transition duration-200 ease-in">
+<input checked="" class="toggle-checkbox absolute block w-6 h-6 rounded-full bg-white border-4 appearance-none cursor-pointer" id="toggle1" name="toggle1" type="checkbox"/>
+<label class="toggle-label block overflow-hidden h-6 rounded-full bg-gray-300 cursor-pointer" for="toggle1"></label>
+</div>
+</div>
+<div class="flex items-center justify-between p-lg border-b border-surface-variant hover:bg-surface-container-low transition-colors">
+<div class="flex items-center gap-md">
+<div class="w-10 h-10 rounded-full bg-error-container/30 flex items-center justify-center text-error">
+<span class="material-symbols-outlined">warning</span>
+</div>
+<div>
+<p class="font-body-md text-body-md font-medium text-on-surface">Risk alerts</p>
+<p class="font-caption text-caption text-on-surface-variant mt-1">Notify me of potential flare-ups</p>
+</div>
+</div>
+<div class="relative inline-block w-12 mr-2 align-middle select-none transition duration-200 ease-in">
+<input checked="" class="toggle-checkbox absolute block w-6 h-6 rounded-full bg-white border-4 appearance-none cursor-pointer" id="toggle2" name="toggle2" type="checkbox"/>
+<label class="toggle-label block overflow-hidden h-6 rounded-full bg-gray-300 cursor-pointer" for="toggle2"></label>
+</div>
+</div>
+<div class="flex items-center justify-between p-lg hover:bg-surface-container-low transition-colors">
+<div class="flex items-center gap-md">
+<div class="w-10 h-10 rounded-full bg-primary-container/10 flex items-center justify-center text-primary-container">
+<span class="material-symbols-outlined">lightbulb</span>
+</div>
+<div>
+<p class="font-body-md text-body-md font-medium text-on-surface">Daily insights</p>
+<p class="font-caption text-caption text-on-surface-variant mt-1">Receive AI-driven health tips</p>
+</div>
+</div>
+<div class="relative inline-block w-12 mr-2 align-middle select-none transition duration-200 ease-in">
+<input class="toggle-checkbox absolute block w-6 h-6 rounded-full bg-white border-4 appearance-none cursor-pointer" id="toggle3" name="toggle3" type="checkbox"/>
+<label class="toggle-label block overflow-hidden h-6 rounded-full bg-gray-300 cursor-pointer" for="toggle3"></label>
+</div>
+</div>
+</div>
+</section>
+<!-- Section 3: My Data -->
+<section>
+<h2 class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider mb-md ml-1">My Data</h2>
+<div class="bg-surface-container-lowest rounded-xl border border-surface-variant shadow-ambient-sm overflow-hidden flex flex-col">
+<button class="flex items-center justify-between p-lg border-b border-surface-variant hover:bg-surface-container-low transition-colors w-full text-left">
+<div class="flex items-center gap-md">
+<div class="w-10 h-10 rounded-full bg-surface-container flex items-center justify-center text-on-surface-variant">
+<span class="material-symbols-outlined">download</span>
+</div>
+<div>
+<p class="font-body-md text-body-md font-medium text-on-surface">Export Data</p>
+<p class="font-caption text-caption text-on-surface-variant mt-1">Download as PDF or CSV</p>
+</div>
+</div>
+<span class="material-symbols-outlined text-outline">chevron_right</span>
+</button>
+<button class="flex items-center justify-between p-lg hover:bg-surface-container-low transition-colors w-full text-left">
+<div class="flex items-center gap-md">
+<div class="w-10 h-10 rounded-full bg-surface-container flex items-center justify-center text-on-surface-variant">
+<span class="material-symbols-outlined">devices</span>
+</div>
+<div>
+<p class="font-body-md text-body-md font-medium text-on-surface">Connect Devices</p>
+<p class="font-caption text-caption text-on-surface-variant mt-1">Smartwatch, Apple Health</p>
+</div>
+</div>
+<span class="material-symbols-outlined text-outline">chevron_right</span>
+</button>
+</div>
+</section>
+<!-- Section 4: App Settings -->
+<section class="mb-lg">
+<h2 class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider mb-md ml-1">App Settings</h2>
+<div class="bg-surface-container-lowest rounded-xl border border-surface-variant shadow-ambient-sm overflow-hidden flex flex-col">
+<button class="flex items-center justify-between p-lg border-b border-surface-variant hover:bg-surface-container-low transition-colors w-full text-left">
+<div class="flex items-center gap-md">
+<div class="w-10 h-10 rounded-full bg-surface-container flex items-center justify-center text-on-surface-variant">
+<span class="material-symbols-outlined">palette</span>
+</div>
+<p class="font-body-md text-body-md font-medium text-on-surface">Theme</p>
+</div>
+<div class="flex items-center gap-2">
+<span class="font-caption text-caption text-on-surface-variant">Light</span>
+<span class="material-symbols-outlined text-outline">chevron_right</span>
+</div>
+</button>
+<button class="flex items-center justify-between p-lg border-b border-surface-variant hover:bg-surface-container-low transition-colors w-full text-left">
+<div class="flex items-center gap-md">
+<div class="w-10 h-10 rounded-full bg-surface-container flex items-center justify-center text-on-surface-variant">
+<span class="material-symbols-outlined">help</span>
+</div>
+<p class="font-body-md text-body-md font-medium text-on-surface">Help &amp; Support</p>
+</div>
+<span class="material-symbols-outlined text-outline">chevron_right</span>
+</button>
+<button class="flex items-center justify-between p-lg hover:bg-error-container/20 transition-colors w-full text-left group">
+<div class="flex items-center gap-md">
+<div class="w-10 h-10 rounded-full bg-error-container/30 flex items-center justify-center text-error group-hover:bg-error group-hover:text-white transition-colors">
+<span class="material-symbols-outlined">logout</span>
+</div>
+<p class="font-body-md text-body-md font-medium text-error">Log out</p>
+</div>
+</button>
+</div>
+</section>
+</main>
+<!-- BottomNavBar -->
+<nav class="bg-white/80 dark:bg-slate-900/80 backdrop-blur-md fixed bottom-0 w-full z-50 flex justify-around items-center px-4 py-3 pb-safe border-t border-[#E2E8F0] dark:border-slate-800 shadow-[0_-4px_12px_rgba(108,92,231,0.05)]">
+<button class="flex flex-col items-center justify-center text-slate-400 dark:text-slate-500 px-3 py-1 hover:text-[#6C5CE7] dark:hover:text-[#A29BFE] transition-all">
+<span class="material-symbols-outlined mb-1">dashboard</span>
+<span class="font-['Manrope'] text-[10px] font-medium">Dashboard</span>
+</button>
+<button class="flex flex-col items-center justify-center text-slate-400 dark:text-slate-500 px-3 py-1 hover:text-[#6C5CE7] dark:hover:text-[#A29BFE] transition-all">
+<span class="material-symbols-outlined mb-1">calendar_month</span>
+<span class="font-['Manrope'] text-[10px] font-medium">History</span>
+</button>
+<button class="flex flex-col items-center justify-center text-slate-400 dark:text-slate-500 px-3 py-1 hover:text-[#6C5CE7] dark:hover:text-[#A29BFE] transition-all">
+<span class="material-symbols-outlined mb-1">analytics</span>
+<span class="font-['Manrope'] text-[10px] font-medium">Analysis</span>
+</button>
+<button class="flex flex-col items-center justify-center text-[#6C5CE7] dark:text-[#A29BFE] bg-[#6C5CE7]/10 dark:bg-[#6C5CE7]/20 rounded-xl px-3 py-1 scale-95 duration-150">
+<span class="material-symbols-outlined mb-1" style="font-variation-settings: 'FILL' 1;">smart_toy</span>
+<span class="font-['Manrope'] text-[10px] font-medium">Assistant</span>
+</button>
+</nav>
+</body></html>

@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+
+<html class="antialiased text-on-surface bg-background" lang="pt-BR"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>FibroSync - Check-in</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                            "inverse-primary": "#c6bfff",
+                            "outline": "#787586",
+                            "outline-variant": "#c8c4d7",
+                            "background": "#f8f9fd",
+                            "secondary-fixed": "#d4e3ff",
+                            "tertiary": "#006461",
+                            "primary-container": "#6c5ce7",
+                            "surface-container-low": "#f2f3f7",
+                            "on-secondary-fixed-variant": "#004883",
+                            "surface": "#f8f9fd",
+                            "surface-bright": "#f8f9fd",
+                            "on-secondary-fixed": "#001c39",
+                            "on-error": "#ffffff",
+                            "on-primary": "#ffffff",
+                            "on-background": "#191c1f",
+                            "secondary": "#0060ac",
+                            "inverse-on-surface": "#eff1f5",
+                            "surface-tint": "#5847d2",
+                            "on-surface-variant": "#474554",
+                            "on-tertiary": "#ffffff",
+                            "tertiary-fixed": "#5af9f3",
+                            "on-tertiary-fixed-variant": "#00504e",
+                            "on-secondary": "#ffffff",
+                            "on-secondary-container": "#003e73",
+                            "on-primary-fixed-variant": "#4029ba",
+                            "on-error-container": "#93000a",
+                            "tertiary-container": "#007f7c",
+                            "surface-variant": "#e1e2e6",
+                            "tertiary-fixed-dim": "#2edcd7",
+                            "primary-fixed-dim": "#c6bfff",
+                            "surface-container-lowest": "#ffffff",
+                            "inverse-surface": "#2e3134",
+                            "secondary-fixed-dim": "#a4c9ff",
+                            "secondary-container": "#68abff",
+                            "surface-container-high": "#e7e8ec",
+                            "primary-fixed": "#e4dfff",
+                            "surface-dim": "#d9dade",
+                            "on-surface": "#191c1f",
+                            "on-tertiary-fixed": "#00201f",
+                            "error": "#ba1a1a",
+                            "on-primary-fixed": "#160066",
+                            "surface-container-highest": "#e1e2e6",
+                            "on-tertiary-container": "#d9fffc",
+                            "error-container": "#ffdad6",
+                            "on-primary-container": "#faf6ff",
+                            "primary": "#5341cd",
+                            "surface-container": "#edeef2"
+                    },
+                    "borderRadius": {
+                            "DEFAULT": "0.25rem",
+                            "lg": "0.5rem",
+                            "xl": "0.75rem",
+                            "full": "9999px"
+                    },
+                    "spacing": {
+                            "margin": "32px",
+                            "gutter": "24px",
+                            "unit": "4px",
+                            "lg": "24px",
+                            "md": "16px",
+                            "sm": "8px",
+                            "xl": "32px",
+                            "xxl": "48px",
+                            "xs": "4px"
+                    },
+                    "fontFamily": {
+                            "body-md": ["Manrope"],
+                            "h1": ["Manrope"],
+                            "body-lg": ["Manrope"],
+                            "label-sm": ["Manrope"],
+                            "caption": ["Manrope"],
+                            "h3": ["Manrope"],
+                            "h2": ["Manrope"]
+                    },
+                    "fontSize": {
+                            "body-md": ["16px", {"lineHeight": "1.6", "letterSpacing": "0", "fontWeight": "400"}],
+                            "h1": ["40px", {"lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                            "body-lg": ["18px", {"lineHeight": "1.6", "letterSpacing": "0", "fontWeight": "400"}],
+                            "label-sm": ["14px", {"lineHeight": "1.2", "letterSpacing": "0.02em", "fontWeight": "600"}],
+                            "caption": ["12px", {"lineHeight": "1.2", "letterSpacing": "0", "fontWeight": "500"}],
+                            "h3": ["24px", {"lineHeight": "1.4", "letterSpacing": "0", "fontWeight": "600"}],
+                            "h2": ["32px", {"lineHeight": "1.3", "letterSpacing": "-0.01em", "fontWeight": "600"}]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+          font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        /* Custom range slider styling for a more premium look */
+        input[type=range] {
+            -webkit-appearance: none;
+            width: 100%;
+            background: transparent;
+        }
+        input[type=range]::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            height: 24px;
+            width: 24px;
+            border-radius: 50%;
+            background: #ffffff;
+            border: 2px solid #5341cd; /* Primary color */
+            cursor: pointer;
+            margin-top: -10px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+        }
+        input[type=range]::-webkit-slider-runnable-track {
+            width: 100%;
+            height: 6px;
+            cursor: pointer;
+            background: linear-gradient(to right, #4ade80, #facc15, #f87171); /* Green to yellow to red */
+            border-radius: 3px;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-background pb-[100px] font-body-md antialiased min-h-screen">
+<!-- Top Navigation (Task-focused, no bottom nav) -->
+<header class="fixed top-0 w-full z-50 flex justify-between items-center px-6 h-16 bg-[#F5F6FA] dark:bg-slate-950 border-b border-slate-200 dark:border-slate-800 shadow-[0_2px_4px_rgba(108,92,231,0.05)]">
+<button class="text-[#6C5CE7] hover:bg-slate-100 p-2 rounded-full transition-colors flex items-center justify-center">
+<span class="material-symbols-outlined">arrow_back</span>
+</button>
+<h1 class="font-h3 text-h3 text-on-surface font-semibold tracking-tight">Fazer Check-in</h1>
+<div class="w-10"></div> <!-- Spacer for centering -->
+</header>
+<main class="pt-24 px-6 max-w-2xl mx-auto space-y-8">
+<!-- Pain Level Section -->
+<section class="bg-surface-container-lowest rounded-xl p-6 shadow-[0_4px_12px_rgba(108,92,231,0.05)] border border-surface-variant relative overflow-hidden">
+<div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-tertiary-fixed-dim to-primary"></div>
+<div class="flex items-center gap-2 mb-6">
+<span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1;">vital_signs</span>
+<h2 class="font-h3 text-h3 text-on-surface">Nível de Dor</h2>
+</div>
+<div class="space-y-6">
+<div class="flex justify-between items-end">
+<span class="font-h2 text-h2 text-primary">6</span>
+<span class="font-body-md text-body-md text-on-surface-variant">Moderada</span>
+</div>
+<div class="relative pt-1">
+<input class="w-full" id="painSlider" max="10" min="0" type="range" value="6"/>
+<div class="flex justify-between text-caption font-caption text-outline mt-2">
+<span>0 (Sem dor)</span>
+<span>10 (Máxima)</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Metrics Grid (Bento style) -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+<!-- Sleep Section -->
+<section class="bg-surface-container-lowest rounded-xl p-5 shadow-[0_4px_12px_rgba(108,92,231,0.05)] border border-surface-variant">
+<div class="flex items-center gap-2 mb-4">
+<span class="material-symbols-outlined text-secondary" style="font-variation-settings: 'FILL' 1;">bedtime</span>
+<h3 class="font-label-sm text-label-sm text-on-surface">Sono</h3>
+</div>
+<div class="grid grid-cols-3 gap-2">
+<button class="flex flex-col items-center justify-center p-3 rounded-lg border border-surface-variant hover:bg-surface-container transition-colors">
+<span class="material-symbols-outlined text-outline mb-1">sentiment_sad</span>
+<span class="font-caption text-caption text-on-surface-variant">Ruim</span>
+</button>
+<button class="flex flex-col items-center justify-center p-3 rounded-lg border-2 border-primary bg-primary-container/10 text-primary transition-colors">
+<span class="material-symbols-outlined mb-1" style="font-variation-settings: 'FILL' 1;">sentiment_neutral</span>
+<span class="font-caption text-caption font-semibold">Médio</span>
+</button>
+<button class="flex flex-col items-center justify-center p-3 rounded-lg border border-surface-variant hover:bg-surface-container transition-colors">
+<span class="material-symbols-outlined text-outline mb-1">sentiment_satisfied</span>
+<span class="font-caption text-caption text-on-surface-variant">Bom</span>
+</button>
+</div>
+</section>
+<!-- Energy Section -->
+<section class="bg-surface-container-lowest rounded-xl p-5 shadow-[0_4px_12px_rgba(108,92,231,0.05)] border border-surface-variant">
+<div class="flex items-center gap-2 mb-4">
+<span class="material-symbols-outlined text-[#eab308]" style="font-variation-settings: 'FILL' 1;">bolt</span>
+<h3 class="font-label-sm text-label-sm text-on-surface">Energia</h3>
+</div>
+<div class="grid grid-cols-3 gap-2">
+<button class="flex flex-col items-center justify-center p-3 rounded-lg border border-surface-variant hover:bg-surface-container transition-colors">
+<span class="material-symbols-outlined text-outline mb-1">battery_0_bar</span>
+<span class="font-caption text-caption text-on-surface-variant">Baixa</span>
+</button>
+<button class="flex flex-col items-center justify-center p-3 rounded-lg border border-surface-variant hover:bg-surface-container transition-colors">
+<span class="material-symbols-outlined text-outline mb-1">battery_4_bar</span>
+<span class="font-caption text-caption text-on-surface-variant">Média</span>
+</button>
+<button class="flex flex-col items-center justify-center p-3 rounded-lg border-2 border-primary bg-primary-container/10 text-primary transition-colors">
+<span class="material-symbols-outlined mb-1" style="font-variation-settings: 'FILL' 1;">battery_full</span>
+<span class="font-caption text-caption font-semibold">Alta</span>
+</button>
+</div>
+</section>
+</div>
+<!-- Mood Section -->
+<section class="bg-surface-container-lowest rounded-xl p-6 shadow-[0_4px_12px_rgba(108,92,231,0.05)] border border-surface-variant">
+<div class="flex items-center gap-2 mb-4">
+<span class="material-symbols-outlined text-[#ec4899]" style="font-variation-settings: 'FILL' 1;">mood</span>
+<h3 class="font-label-sm text-label-sm text-on-surface">Humor</h3>
+</div>
+<div class="flex justify-between items-center gap-2">
+<button class="flex-1 py-3 text-2xl hover:scale-110 transition-transform opacity-50 grayscale hover:grayscale-0">😢</button>
+<button class="flex-1 py-3 text-2xl hover:scale-110 transition-transform opacity-50 grayscale hover:grayscale-0">😕</button>
+<button class="flex-1 py-3 text-2xl scale-110 bg-surface-container-high rounded-full ring-2 ring-primary">😐</button>
+<button class="flex-1 py-3 text-2xl hover:scale-110 transition-transform opacity-50 grayscale hover:grayscale-0">🙂</button>
+<button class="flex-1 py-3 text-2xl hover:scale-110 transition-transform opacity-50 grayscale hover:grayscale-0">😄</button>
+</div>
+</section>
+<!-- Additional Notes Section -->
+<section class="bg-surface-container-lowest rounded-xl p-6 shadow-[0_4px_12px_rgba(108,92,231,0.05)] border border-surface-variant">
+<div class="flex items-center gap-2 mb-4">
+<span class="material-symbols-outlined text-outline">edit_note</span>
+<h3 class="font-label-sm text-label-sm text-on-surface">Notas adicionais <span class="text-outline font-normal">(Opcional)</span></h3>
+</div>
+<textarea class="w-full bg-[#F5F6FA] border border-surface-variant rounded-lg p-4 font-body-md text-body-md text-on-surface focus:ring-2 focus:ring-primary focus:bg-white transition-all resize-none placeholder:text-outline" placeholder="Como você está se sentindo em mais detalhes? Algum gatilho percebido?" rows="3"></textarea>
+</section>
+<!-- Action Button -->
+<div class="pt-4 pb-8">
+<button class="w-full bg-gradient-to-r from-primary to-surface-tint text-on-primary font-label-sm text-label-sm py-4 rounded-xl shadow-[0_4px_14px_rgba(108,92,231,0.3)] hover:shadow-[0_6px_20px_rgba(108,92,231,0.4)] transition-all flex items-center justify-center gap-2">
+<span class="material-symbols-outlined">check_circle</span>
+                Salvar Check-in
+            </button>
+</div>
+</main>
+</body></html>
