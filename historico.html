@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>FibroSync - Histórico</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script src="./js/tailwind-config.js"></script>
+    <link rel="stylesheet" href="./css/styles-historico.css">
+</head>
+
+<body class="bg-background text-on-background font-body-md antialiased min-h-screen pb-24 pt-16 md:pb-0">
+    <!-- TopAppBar -->
+    <header
+        class="bg-[#F5F6FA] font-['Manrope'] font-semibold text-lg border-b border-slate-200 fixed top-0 w-full z-50 flex justify-between items-center px-6 h-16">
+        <div class="flex items-center gap-4">
+            <div class="w-8 h-8 rounded-full bg-surface-variant overflow-hidden border border-outline-variant">
+                <img alt="User profile portrait" class="w-full h-full object-cover"
+                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuBgp_9cU891iCNNEqXVxX0hHXz499N2ZEZ8R4CDT1EAyOsxp-bOXe0nzZCyTmp5RWkAmxZ7UsMpeYbJYIjrPbDp81OABeGvrfgPT1c9O79Wo5LqMpzzyYvy4uIn6Q-PUEtAudomTrBM5Hlux7yepeBqXTUtQkVzGRVYAwiKN9zEerSKqsSPGUHf7x7W-mBfaqmg85Uvu-MZAjoEVKdHyjBRV2HS4Zq_GvNWG_M4lRO9wTaroq5J2Fmq5b3tc_yNI9zv603-q0dfG9Q" />
+            </div>
+        </div>
+        <div class="text-xl font-bold text-[#6C5CE7] tracking-tight">FibroSync</div>
+        <button
+            class="text-[#6C5CE7] hover:bg-slate-100 transition-colors p-2 rounded-full cursor-pointer">
+            <span class="material-symbols-outlined">notifications</span>
+        </button>
+    </header>
+
+    <!-- Desktop Side Nav -->
+    <aside
+        class="hidden md:flex flex-col fixed left-0 top-16 bottom-0 w-64 bg-surface-container-lowest border-r border-outline-variant p-4 z-40">
+        <div class="space-y-2 mt-6">
+            <a class="flex items-center gap-3 px-4 py-3 text-on-surface-variant hover:bg-surface-container-low rounded-xl transition-colors font-label-sm text-label-sm"
+                href="index.html">
+                <span class="material-symbols-outlined">dashboard</span>
+                Dashboard
+            </a>
+            <a class="flex items-center gap-3 px-4 py-3 text-[#6C5CE7] bg-[#6C5CE7]/10 rounded-xl transition-colors font-label-sm text-label-sm"
+                href="historico.html">
+                <span class="material-symbols-outlined"
+                    style="font-variation-settings: 'FILL' 1;">calendar_month</span>
+                Histórico
+            </a>
+            <a class="flex items-center gap-3 px-4 py-3 text-on-surface-variant hover:bg-surface-container-low rounded-xl transition-colors font-label-sm text-label-sm"
+                href="analise.html">
+                <span class="material-symbols-outlined">analytics</span>
+                Análise
+            </a>
+            <a class="flex items-center gap-3 px-4 py-3 text-on-surface-variant hover:bg-surface-container-low rounded-xl transition-colors font-label-sm text-label-sm"
+                href="perfil.html">
+                <span class="material-symbols-outlined">person</span>
+                Perfil
+            </a>
+        </div>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="max-w-3xl mx-auto px-4 md:px-6 py-6 md:py-8 space-y-6">
+        <!-- Header & Filters -->
+        <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-2">
+            <div>
+                <h1 class="font-h2 text-h2 text-on-background">Histórico</h1>
+                <p class="font-body-md text-body-md text-on-surface-variant mt-1">Revise seus check-ins diários e
+                    tendências de sintomas.</p>
+            </div>
+            <div class="flex flex-wrap gap-2">
+                <button
+                    class="px-4 py-2 bg-surface-container-low text-on-surface-variant border border-outline-variant rounded-full font-label-sm text-label-sm hover:bg-surface-variant transition-colors flex items-center gap-2">
+                    <span class="material-symbols-outlined text-[18px]">calendar_today</span>
+                    Últimos 7 Dias
+                </button>
+                <button
+                    class="px-4 py-2 bg-transparent text-on-surface-variant border border-outline-variant rounded-full font-label-sm text-label-sm hover:bg-surface-container-low transition-colors">
+                    Últimos 30 Dias
+                </button>
+                <button
+                    class="px-4 py-2 bg-transparent text-on-surface-variant border border-outline-variant rounded-full font-label-sm text-label-sm hover:bg-surface-container-low transition-colors flex items-center gap-2">
+                    <span class="material-symbols-outlined text-[18px]">filter_list</span>
+                    Filtros
+                </button>
+            </div>
+        </div>
+
+        <!-- History List -->
+        <div class="space-y-4">
+            <!-- Day Item: Normal -->
+            <div
+                class="bg-surface-container-lowest border border-outline-variant rounded-xl p-4 shadow-[0_2px_4px_rgba(108,92,231,0.02)] hover:shadow-[0_10px_20px_rgba(108,92,231,0.05)] transition-shadow">
+                <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+                    <div class="flex items-center gap-4">
+                        <div
+                            class="w-12 h-12 bg-surface-container-low rounded-lg flex flex-col items-center justify-center border border-outline-variant">
+                            <span class="font-label-sm text-label-sm text-on-surface-variant">Out</span>
+                            <span class="font-h3 text-h3 leading-none text-on-background">24</span>
+                        </div>
+                        <div>
+                            <h3 class="font-label-sm text-label-sm text-on-background flex items-center gap-2">
+                                Quarta-feira
+                                <span class="w-1.5 h-1.5 rounded-full bg-tertiary-container"></span>
+                            </h3>
+                            <p class="font-caption text-caption text-on-surface-variant mt-0.5">Atividade moderada
+                                registrada</p>
+                        </div>
+                    </div>
+                    <div class="flex items-center gap-4 flex-wrap">
+                        <div class="flex flex-col items-end">
+                            <span class="font-caption text-caption text-on-surface-variant">Risco</span>
+                            <div class="flex items-center gap-1.5">
+                                <span class="font-label-sm text-label-sm text-on-background">Baixo</span>
+                                <span
+                                    class="material-symbols-outlined text-tertiary-container text-[18px]">check_circle</span>
+                            </div>
+                        </div>
+                        <div class="flex gap-2 flex-wrap">
+                            <span
+                                class="px-2.5 py-1 bg-surface-container-low text-on-surface-variant rounded-md font-caption text-caption border border-outline-variant/50">Fadiga:
+                                Baixa</span>
+                            <span
+                                class="px-2.5 py-1 bg-surface-container-low text-on-surface-variant rounded-md font-caption text-caption border border-outline-variant/50">Dor:
+                                Leve</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Day Item: Critical/High Risk -->
+            <div
+                class="bg-error-container/30 border border-error/20 rounded-xl p-4 shadow-[0_4px_12px_rgba(186,26,26,0.05)] relative overflow-hidden">
+                <div class="absolute top-0 left-0 w-1 h-full bg-error"></div>
+                <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pl-2">
+                    <div class="flex items-center gap-4">
+                        <div
+                            class="w-12 h-12 bg-surface-container-lowest rounded-lg flex flex-col items-center justify-center border border-error/20">
+                            <span class="font-label-sm text-label-sm text-error">Out</span>
+                            <span class="font-h3 text-h3 leading-none text-on-background">23</span>
+                        </div>
+                        <div>
+                            <h3 class="font-label-sm text-label-sm text-on-background flex items-center gap-2">
+                                Terça-feira
+                                <span class="material-symbols-outlined text-error text-[16px]">warning</span>
+                            </h3>
+                            <p class="font-caption text-caption text-on-surface-variant mt-0.5">Sintomas elevados
+                                detectados</p>
+                        </div>
+                    </div>
+                    <div class="flex items-center gap-4 flex-wrap">
+                        <div class="flex flex-col items-end">
+                            <span class="font-caption text-caption text-on-surface-variant">Risco</span>
+                            <div class="flex items-center gap-1.5">
+                                <span class="font-label-sm text-label-sm text-error font-semibold">Alto</span>
+                                <span class="material-symbols-outlined text-error text-[18px]">trending_up</span>
+                            </div>
+                        </div>
+                        <div class="flex gap-2 flex-wrap">
+                            <span
+                                class="px-2.5 py-1 bg-surface-container-lowest text-error rounded-md font-caption text-caption border border-error/20">Fadiga:
+                                Alta</span>
+                            <span
+                                class="px-2.5 py-1 bg-surface-container-lowest text-error rounded-md font-caption text-caption border border-error/20">Dor:
+                                Severa</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Day Item: Normal -->
+            <div
+                class="bg-surface-container-lowest border border-outline-variant rounded-xl p-4 shadow-[0_2px_4px_rgba(108,92,231,0.02)] hover:shadow-[0_10px_20px_rgba(108,92,231,0.05)] transition-shadow">
+                <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+                    <div class="flex items-center gap-4">
+                        <div
+                            class="w-12 h-12 bg-surface-container-low rounded-lg flex flex-col items-center justify-center border border-outline-variant">
+                            <span class="font-label-sm text-label-sm text-on-surface-variant">Out</span>
+                            <span class="font-h3 text-h3 leading-none text-on-background">22</span>
+                        </div>
+                        <div>
+                            <h3 class="font-label-sm text-label-sm text-on-background flex items-center gap-2">
+                                Segunda-feira
+                            </h3>
+                            <p class="font-caption text-caption text-on-surface-variant mt-0.5">Sync de rotina
+                                concluído</p>
+                        </div>
+                    </div>
+                    <div class="flex items-center gap-4 flex-wrap">
+                        <div class="flex flex-col items-end">
+                            <span class="font-caption text-caption text-on-surface-variant">Risco</span>
+                            <div class="flex items-center gap-1.5">
+                                <span class="font-label-sm text-label-sm text-on-background">Moderado</span>
+                                <span class="material-symbols-outlined text-secondary text-[18px]">remove</span>
+                            </div>
+                        </div>
+                        <div class="flex gap-2 flex-wrap">
+                            <span
+                                class="px-2.5 py-1 bg-surface-container-low text-on-surface-variant rounded-md font-caption text-caption border border-outline-variant/50">Fadiga:
+                                Média</span>
+                            <span
+                                class="px-2.5 py-1 bg-surface-container-low text-on-surface-variant rounded-md font-caption text-caption border border-outline-variant/50">Sono:
+                                Ruim</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Load More -->
+            <div class="pt-4 flex justify-center">
+                <button
+                    class="px-6 py-2.5 border border-outline-variant text-on-surface-variant rounded-full font-label-sm text-label-sm hover:bg-surface-container-low transition-colors bg-surface-container-lowest shadow-sm">
+                    Carregar Semana Anterior
+                </button>
+            </div>
+        </div>
+    </main>
+
+    <!-- BottomNavBar (Mobile Only) -->
+    <nav
+        class="bg-white/80 backdrop-blur-md border-t border-[#E2E8F0] shadow-[0_-4px_12px_rgba(108,92,231,0.05)] fixed bottom-0 w-full z-50 flex justify-around items-center px-4 py-3 font-['Manrope'] text-[10px] font-medium md:hidden">
+        <a class="flex flex-col items-center justify-center text-slate-400 px-3 py-1 hover:text-[#6C5CE7] transition-all"
+            href="index.html">
+            <span class="material-symbols-outlined text-[24px]">dashboard</span>
+            <span class="mt-1">Dashboard</span>
+        </a>
+        <a class="flex flex-col items-center justify-center text-[#6C5CE7] bg-[#6C5CE7]/10 rounded-xl px-3 py-1 scale-95 duration-150"
+            href="historico.html">
+            <span class="material-symbols-outlined text-[24px]"
+                style="font-variation-settings: 'FILL' 1;">calendar_month</span>
+            <span class="mt-1">Histórico</span>
+        </a>
+        <a class="flex flex-col items-center justify-center text-slate-400 px-3 py-1 hover:text-[#6C5CE7] transition-all"
+            href="analise.html">
+            <span class="material-symbols-outlined text-[24px]">analytics</span>
+            <span class="mt-1">Análise</span>
+        </a>
+        <a class="flex flex-col items-center justify-center text-slate-400 px-3 py-1 hover:text-[#6C5CE7] transition-all"
+            href="perfil.html">
+            <span class="material-symbols-outlined text-[24px]">person</span>
+            <span class="mt-1">Perfil</span>
+        </a>
+    </nav>
+</body>
+
+</html>

@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>FibroSync - Análise Avançada</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&amp;display=swap"
+        rel="stylesheet" />
+    <script src="./js/tailwind-config.js"></script>
+    <link rel="stylesheet" href="./css/styles-analise.css">
+</head>
+
+<body class="bg-background text-on-background antialiased min-h-screen flex flex-col pt-16 pb-20 md:pb-0">
+    <!-- TopAppBar -->
+    <header
+        class="bg-[#F5F6FA] border-b border-slate-200 fixed top-0 w-full z-50 flex justify-between items-center px-6 h-16">
+        <div class="flex items-center gap-4">
+            <div class="w-8 h-8 rounded-full overflow-hidden bg-surface-container-high border border-outline-variant">
+                <img alt="User profile portrait" class="w-full h-full object-cover"
+                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuBaUStYFARfCz4RRP0PFTRESo9X7wxeB7ddiENEE8A2TMrFPpZUXD-JLcewREQ1GGHecar9-Oka3j87I1bsr6mv5v3jrNxeKZvqLMJ-H6uOUtw-f0Gj-1RwsYtaCVDXS9ggonNiU0aaphi_TzQKB03r1lj_FvkomnFCTR1m0gxPDlndAcSbH5WvSPaTpp6vDf_R4IcfCji3KzRoYKaJa3Rd_abMv59Cl5hNfhul7ivCIyuMnnKKPE2uUEZ6IKGtfjedjvMTLcvv1n4" />
+            </div>
+            <h1 class="font-['Manrope'] text-xl font-bold text-[#6C5CE7] tracking-tight">FibroSync</h1>
+        </div>
+        <!-- Desktop Nav -->
+        <nav class="hidden md:flex items-center gap-2">
+            <a class="text-slate-500 hover:bg-slate-100 transition-colors px-4 py-2 rounded-lg font-label-sm text-label-sm flex items-center gap-2"
+                href="index.html">
+                <span class="material-symbols-outlined text-[20px]">dashboard</span>
+                Dashboard
+            </a>
+            <a class="text-slate-500 hover:bg-slate-100 transition-colors px-4 py-2 rounded-lg font-label-sm text-label-sm flex items-center gap-2"
+                href="historico.html">
+                <span class="material-symbols-outlined text-[20px]">calendar_month</span>
+                Histórico
+            </a>
+            <a class="text-[#6C5CE7] bg-[#6C5CE7]/10 px-4 py-2 rounded-lg font-label-sm text-label-sm flex items-center gap-2"
+                href="analise.html">
+                <span class="material-symbols-outlined text-[20px]"
+                    style="font-variation-settings: 'FILL' 1;">analytics</span>
+                Análise
+            </a>
+            <a class="text-slate-500 hover:bg-slate-100 transition-colors px-4 py-2 rounded-lg font-label-sm text-label-sm flex items-center gap-2"
+                href="perfil.html">
+                <span class="material-symbols-outlined text-[20px]">person</span>
+                Perfil
+            </a>
+        </nav>
+        <button class="text-[#6C5CE7] hover:bg-slate-100 transition-colors p-2 rounded-full">
+            <span class="material-symbols-outlined">notifications</span>
+        </button>
+    </header>
+
+    <!-- Main Content -->
+    <main class="flex-grow max-w-7xl mx-auto w-full px-4 md:px-6 py-6 flex flex-col gap-6">
+        <header class="mb-2">
+            <h2 class="font-h2 text-h2 text-on-background mb-1">Análise Avançada</h2>
+            <p class="font-body-md text-body-md text-on-surface-variant">Mergulhe nas correlações que afetam seu
+                bem-estar.</p>
+        </header>
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-6">
+            <!-- Left Column: AI & Weather -->
+            <div class="lg:col-span-4 flex flex-col gap-6">
+                <!-- AI Insight Card -->
+                <div
+                    class="bg-surface-container-lowest rounded-xl shadow-[0_4px_12px_rgba(108,92,231,0.05)] border border-outline-variant/30 p-6 relative overflow-hidden">
+                    <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-primary-container to-secondary">
+                    </div>
+                    <div class="flex items-start gap-4 mb-4">
+                        <div
+                            class="w-10 h-10 rounded-full bg-primary-container/10 flex items-center justify-center text-primary-container">
+                            <span class="material-symbols-outlined text-[24px]">psychology</span>
+                        </div>
+                        <div>
+                            <h3
+                                class="font-label-sm text-label-sm text-primary-container tracking-wider uppercase mb-1">
+                                Insight IA</h3>
+                            <p class="font-body-md text-body-md text-on-background"><strong>80% das dores altas
+                                    ocorreram após noites ruins</strong></p>
+                        </div>
+                    </div>
+                    <p class="font-caption text-caption text-on-surface-variant">Com base nos seus dados dos últimos 30
+                        dias, a má qualidade do sono é o maior preditor de dias com dor alta.</p>
+                </div>
+                <!-- Weather Widget -->
+                <div
+                    class="bg-surface-container-lowest rounded-xl shadow-[0_2px_8px_rgba(108,92,231,0.03)] border border-surface-variant p-6 flex items-center justify-between">
+                    <div>
+                        <h3 class="font-label-sm text-label-sm text-on-surface-variant mb-1">Condições Atuais</h3>
+                        <div class="flex items-baseline gap-2">
+                            <span class="font-h1 text-h1 text-on-background">14°C</span>
+                            <span class="font-body-md text-body-md text-outline">/ 57°F</span>
+                        </div>
+                        <p class="font-caption text-caption text-outline mt-1 flex items-center gap-1">
+                            <span class="material-symbols-outlined text-[14px]">humidity_percentage</span> 65% Umidade
+                        </p>
+                    </div>
+                    <div class="flex flex-col items-center">
+                        <span class="material-symbols-outlined text-[48px] text-secondary mb-1"
+                            style="font-variation-settings: 'FILL' 1;">cloud</span>
+                        <span class="font-caption text-caption text-on-surface-variant">Nublado/Frio</span>
+                    </div>
+                </div>
+            </div>
+            <!-- Right Column: Charts -->
+            <div class="lg:col-span-8 flex flex-col gap-6">
+                <!-- Chart 1: Dor vs Sono -->
+                <div
+                    class="bg-surface-container-lowest rounded-xl shadow-[0_2px_8px_rgba(108,92,231,0.03)] border border-surface-variant p-6 flex flex-col h-full min-h-[300px]">
+                    <div class="flex justify-between items-center mb-4">
+                        <h3 class="font-h3 text-h3 text-on-background">Dor vs Sono</h3>
+                        <button class="text-outline hover:text-primary-container transition-colors">
+                            <span class="material-symbols-outlined">more_horiz</span>
+                        </button>
+                    </div>
+                    <div class="flex-grow flex items-end gap-2 relative mt-4 pt-8">
+                        <!-- Y-axis labels -->
+                        <div
+                            class="absolute left-0 top-0 bottom-0 flex flex-col justify-between text-outline font-caption text-caption w-6">
+                            <span>10</span>
+                            <span>5</span>
+                            <span>0</span>
+                        </div>
+                        <!-- Grid lines -->
+                        <div class="absolute left-8 right-0 top-0 h-px bg-surface-variant"></div>
+                        <div class="absolute left-8 right-0 top-1/2 h-px bg-surface-variant"></div>
+                        <div class="absolute left-8 right-0 bottom-0 h-px bg-surface-variant"></div>
+                        <!-- Bars Container -->
+                        <div class="ml-8 flex-grow flex items-end justify-between h-full pb-0 relative z-10">
+                            <!-- Day 1 -->
+                            <div class="flex flex-col items-center gap-1 w-1/5 h-full justify-end group">
+                                <div class="flex gap-1 items-end w-full justify-center h-full">
+                                    <div
+                                        class="w-3 bg-primary-container rounded-t-sm h-[60%] opacity-80 group-hover:opacity-100 transition-opacity">
+                                    </div>
+                                    <div
+                                        class="w-3 bg-secondary rounded-t-sm h-[80%] opacity-80 group-hover:opacity-100 transition-opacity">
+                                    </div>
+                                </div>
+                                <span class="font-caption text-caption text-outline mt-2">Seg</span>
+                            </div>
+                            <!-- Day 2 -->
+                            <div class="flex flex-col items-center gap-1 w-1/5 h-full justify-end group">
+                                <div class="flex gap-1 items-end w-full justify-center h-full">
+                                    <div
+                                        class="w-3 bg-primary-container rounded-t-sm h-[80%] opacity-80 group-hover:opacity-100 transition-opacity">
+                                    </div>
+                                    <div
+                                        class="w-3 bg-secondary rounded-t-sm h-[40%] opacity-80 group-hover:opacity-100 transition-opacity">
+                                    </div>
+                                </div>
+                                <span class="font-caption text-caption text-outline mt-2">Ter</span>
+                            </div>
+                            <!-- Day 3 -->
+                            <div class="flex flex-col items-center gap-1 w-1/5 h-full justify-end group">
+                                <div class="flex gap-1 items-end w-full justify-center h-full">
+                                    <div
+                                        class="w-3 bg-primary-container rounded-t-sm h-[40%] opacity-80 group-hover:opacity-100 transition-opacity">
+                                    </div>
+                                    <div
+                                        class="w-3 bg-secondary rounded-t-sm h-[90%] opacity-80 group-hover:opacity-100 transition-opacity">
+                                    </div>
+                                </div>
+                                <span class="font-caption text-caption text-outline mt-2">Qua</span>
+                            </div>
+                            <!-- Day 4 -->
+                            <div class="flex flex-col items-center gap-1 w-1/5 h-full justify-end group">
+                                <div class="flex gap-1 items-end w-full justify-center h-full">
+                                    <div
+                                        class="w-3 bg-primary-container rounded-t-sm h-[90%] opacity-80 group-hover:opacity-100 transition-opacity">
+                                    </div>
+                                    <div
+                                        class="w-3 bg-secondary rounded-t-sm h-[30%] opacity-80 group-hover:opacity-100 transition-opacity">
+                                    </div>
+                                </div>
+                                <span class="font-caption text-caption text-outline mt-2">Qui</span>
+                            </div>
+                            <!-- Day 5 -->
+                            <div class="flex flex-col items-center gap-1 w-1/5 h-full justify-end group">
+                                <div class="flex gap-1 items-end w-full justify-center h-full">
+                                    <div
+                                        class="w-3 bg-primary-container rounded-t-sm h-[70%] opacity-80 group-hover:opacity-100 transition-opacity">
+                                    </div>
+                                    <div
+                                        class="w-3 bg-secondary rounded-t-sm h-[50%] opacity-80 group-hover:opacity-100 transition-opacity">
+                                    </div>
+                                </div>
+                                <span class="font-caption text-caption text-outline mt-2">Sex</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex justify-center gap-4 mt-4">
+                        <div class="flex items-center gap-1 font-caption text-caption text-on-surface-variant">
+                            <div class="w-3 h-3 rounded-full bg-primary-container"></div> Dor
+                        </div>
+                        <div class="flex items-center gap-1 font-caption text-caption text-on-surface-variant">
+                            <div class="w-3 h-3 rounded-full bg-secondary"></div> Qualidade do Sono
+                        </div>
+                    </div>
+                </div>
+                <!-- Chart 2: Dor vs Clima -->
+                <div
+                    class="bg-surface-container-lowest rounded-xl shadow-[0_2px_8px_rgba(108,92,231,0.03)] border border-surface-variant p-6 flex flex-col h-full min-h-[300px]">
+                    <div class="flex justify-between items-center mb-4">
+                        <h3 class="font-h3 text-h3 text-on-background">Dor vs Clima</h3>
+                        <div class="flex items-center gap-2">
+                            <span
+                                class="font-caption text-caption px-2 py-1 bg-surface-container-low rounded text-on-surface-variant">Temp</span>
+                            <span
+                                class="font-caption text-caption px-2 py-1 text-outline hover:bg-surface-container-low rounded cursor-pointer transition-colors">Umid</span>
+                        </div>
+                    </div>
+                    <div class="flex-grow relative mt-4 pt-8 h-[150px]">
+                        <!-- Y-axis labels -->
+                        <div
+                            class="absolute left-0 top-0 bottom-0 flex flex-col justify-between text-outline font-caption text-caption w-6">
+                            <span>Alto</span>
+                            <span>Méd</span>
+                            <span>Baixo</span>
+                        </div>
+                        <!-- Grid lines -->
+                        <div class="absolute left-8 right-0 top-0 h-px bg-surface-variant"></div>
+                        <div class="absolute left-8 right-0 top-1/2 h-px bg-surface-variant"></div>
+                        <div class="absolute left-8 right-0 bottom-0 h-px bg-surface-variant"></div>
+                        <!-- Line Chart Visualization -->
+                        <div class="ml-8 absolute inset-0 bottom-0 overflow-hidden">
+                            <svg class="w-full h-full" preserveAspectRatio="none" viewBox="0 0 100 100">
+                                <path d="M0,60 Q20,20 40,80 T80,30 T100,50" fill="none" stroke="#6c5ce7"
+                                    stroke-width="2" vector-effect="non-scaling-stroke"></path>
+                                <path d="M0,80 Q25,90 50,40 T75,80 T100,70" fill="none" stroke="#0060ac"
+                                    stroke-dasharray="4,4" stroke-width="2" vector-effect="non-scaling-stroke"></path>
+                            </svg>
+                        </div>
+                        <!-- X-axis labels -->
+                        <div
+                            class="absolute left-8 right-0 -bottom-6 flex justify-between font-caption text-caption text-outline">
+                            <span>Seg</span>
+                            <span>Ter</span>
+                            <span>Qua</span>
+                            <span>Qui</span>
+                            <span>Sex</span>
+                        </div>
+                    </div>
+                    <div class="flex justify-center gap-4 mt-8">
+                        <div class="flex items-center gap-1 font-caption text-caption text-on-surface-variant">
+                            <div class="w-4 h-[2px] bg-primary-container"></div> Dor
+                        </div>
+                        <div class="flex items-center gap-1 font-caption text-caption text-on-surface-variant">
+                            <div class="w-4 h-[2px] border-b-2 border-dashed border-secondary"></div> Temperatura
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- BottomNavBar (Mobile Only) -->
+    <nav
+        class="md:hidden bg-white/80 backdrop-blur-md fixed bottom-0 w-full z-50 flex justify-around items-center px-4 py-3 border-t border-[#E2E8F0] shadow-[0_-4px_12px_rgba(108,92,231,0.05)] font-['Manrope'] text-[10px] font-medium">
+        <a class="flex flex-col items-center justify-center text-slate-400 px-3 py-1 hover:text-[#6C5CE7] transition-all"
+            href="index.html">
+            <span class="material-symbols-outlined text-[24px]">dashboard</span>
+            <span class="mt-1">Dashboard</span>
+        </a>
+        <a class="flex flex-col items-center justify-center text-slate-400 px-3 py-1 hover:text-[#6C5CE7] transition-all"
+            href="historico.html">
+            <span class="material-symbols-outlined text-[24px]">calendar_month</span>
+            <span class="mt-1">Histórico</span>
+        </a>
+        <a class="flex flex-col items-center justify-center text-[#6C5CE7] bg-[#6C5CE7]/10 rounded-xl px-3 py-1 scale-95 duration-150"
+            href="analise.html">
+            <span class="material-symbols-outlined text-[24px]"
+                style="font-variation-settings: 'FILL' 1;">analytics</span>
+            <span class="mt-1">Análise</span>
+        </a>
+        <a class="flex flex-col items-center justify-center text-slate-400 px-3 py-1 hover:text-[#6C5CE7] transition-all"
+            href="perfil.html">
+            <span class="material-symbols-outlined text-[24px]">person</span>
+            <span class="mt-1">Perfil</span>
+        </a>
+    </nav>
+</body>
+
+</html>

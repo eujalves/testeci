@@ -1,33 +1,62 @@
-        .ambient-shadow {
-            box-shadow: 0 4px 12px rgba(108, 92, 231, 0.05);
-        }
+* {
+    box-sizing: border-box;
+}
 
-        .ai-gradient-border {
-            position: relative;
-            background-clip: padding-box;
-            border: 1px solid transparent;
-        }
+.ambient-shadow {
+    box-shadow: 0 4px 12px rgba(108, 92, 231, 0.05);
+}
 
-        .ai-gradient-border::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            right: 0;
-            bottom: 0;
-            left: 0;
-            z-index: -1;
-            margin: -1px;
-            border-radius: inherit;
-            background: linear-gradient(to right, #6c5ce7, #4A90E2);
-        }
+.ai-gradient-border {
+    position: relative;
+    background-clip: padding-box;
+    border: 1px solid transparent;
+}
 
-        body {
-            min-height: max(884px, 100dvh);
-        }
+.ai-gradient-border::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+    margin: -1px;
+    border-radius: inherit;
+    pointer-events: none;
+    background: linear-gradient(to right, #6c5ce7, #4A90E2);
+}
 
-                @media (min-width: 768px) {
-            main {
-                padding-left: 17rem;
-                /* 64 (nav width) + 4 (margin) */
-            }
-        }
+body {
+    min-height: max(884px, 100dvh);
+}
+
+/* Desktop: offset main content for sidebar */
+@media (min-width: 768px) {
+    main {
+        padding-left: 17rem;
+    }
+}
+
+/* Sidebar menu item styles */
+.menu-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px 16px;
+    border-radius: 12px;
+    color: #474554;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
+    transition: background 0.2s, color 0.2s;
+}
+
+.menu-item:hover {
+    background: #f2f3f7;
+    color: #6c5ce7;
+}
+
+.menu-item.active {
+    background: rgba(108, 92, 231, 0.1);
+    color: #6c5ce7;
+}
