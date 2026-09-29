@@ -27,6 +27,7 @@ Este diretório reúne a documentação técnica versionada junto ao código do 
 - [API](api/overview.md)
 - [Deploy](operations/deployment.md)
 - [Releases](releases/overview.md)
+- [Política do changelog](releases/changelog.md)
 
 ## Fontes externas
 

@@ -2,9 +2,12 @@
 
 Este documento define os padrões básicos para contribuição neste repositório.
 
+Enquanto as bases do projeto, do Jira e do Confluence estiverem sendo estruturadas, alterações estruturais podem ser realizadas sem uma chave `FIB`. Referências inexistentes não devem ser inventadas. Quando a alteração estiver associada a uma tarefa do Jira, o fluxo regular passa a ser obrigatório.
+
 Antes de contribuir, consulte:
 
 - [Git Workflow](docs/workflows/git.flow.md)
+- [Política do changelog](docs/releases/changelog.md)
 
 Para detalhes adicionais sobre arquitetura, ambiente de desenvolvimento e integração com a API (Futuro), consulte a documentação disponível em `docs/`.
 
@@ -59,6 +62,8 @@ npm run build
 
 O Pull Request não deve introduzir erros de lint, build ou testes.
 
+Alterações relevantes para uma release devem atualizar a seção `[Não publicado]` do `CHANGELOG.md`. Durante a estruturação inicial, referências inexistentes do Jira ou de Pull Requests não devem ser inventadas.
+
 ---
 
 ## Revisão
@@ -76,7 +81,7 @@ Evite misturar alterações não relacionadas no mesmo Pull Request.
 
 ## Relação com o Jira
 
-O identificador da tarefa deve acompanhar toda a implementação.
+O identificador da tarefa deve acompanhar toda implementação associada a um item registrado no Jira. Alterações pertencentes à estruturação inicial são a exceção temporária a essa regra.
 
 Exemplo:
 

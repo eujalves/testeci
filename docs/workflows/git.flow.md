@@ -4,6 +4,12 @@ Este documento define o padrão utilizado pela equipe para criação de branches
 
 O objetivo é manter o histórico do repositório legível e facilitar a relação entre código, Pull Requests e tarefas do Jira.
 
+## Exceção durante a estruturação inicial
+
+Enquanto as bases do projeto, do Jira e do Confluence estiverem sendo estruturadas, branches, commits e Pull Requests podem ser criados sem uma chave `FIB`. Referências inexistentes não devem ser inventadas.
+
+Esta exceção deixa de ser aplicada quando a alteração estiver relacionada a uma tarefa registrada no Jira. Nesse caso, a chave correspondente deve acompanhar todo o fluxo.
+
 ---
 
 ## 1. Fluxo de desenvolvimento
@@ -221,56 +227,18 @@ O Pull Request deve explicar o que foi alterado e como a implementação pode se
 
 ## Estrutura do Pull Request
 
-```md
-## Jira
+O modelo oficial está em [`.github/pull_request_template.md`](../../.github/pull_request_template.md) e é carregado automaticamente pelo GitHub ao abrir um Pull Request.
 
-[FIB-123](https://aluno-team-zylgcwkh.atlassian.net/browse/FIB-123)
+O template concentra:
 
-## Confluence
+- referências ao Jira, Confluence e Figma;
+- objetivo e resumo das alterações;
+- instruções de teste;
+- evidências visuais ou técnicas;
+- checklist de validação;
+- atualização do changelog, quando aplicável.
 
-<!-- Link para o requisito ou a documentação relacionada -->
-
-## Figma
-
-<!-- Link para o arquivo, a página ou o frame relacionado, quando aplicável -->
-
-## Objetivo
-
-Implementa a tela de login definida na tarefa FIB-123.
-
-## Alterações
-
-- adiciona formulário de login;
-- adiciona validação dos campos;
-- adiciona integração com a API de autenticação;
-- adiciona tratamento de erros.
-
-## Capturas de tela
-
-### Computador
-
-<!-- imagem -->
-
-### Celular
-
-<!-- imagem -->
-
-## Como testar
-
-1. Execute o projeto.
-2. Acesse `/login`.
-3. Informe credenciais válidas.
-4. Verifique o redirecionamento após o login.
-
-## Lista de verificação
-
-- [ ] Código executa sem erros
-- [ ] Testado em computador
-- [ ] Testado em celular
-- [ ] Integração com API validada
-- [ ] Não existem erros no console
-- [ ] Documentação atualizada, quando necessário
-```
+Durante a estruturação inicial, o campo do Jira pode ser marcado como não aplicável. Quando existir uma tarefa relacionada, a chave `FIB-XXX` e seu link são obrigatórios.
 
 ---
 
