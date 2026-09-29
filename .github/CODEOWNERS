@@ -1,0 +1,9 @@
+# Definição inicial; responsáveis adicionais ainda serão definidos.
+
+# Responsável padrão pelo repositório
+* @voidgateway
+
+# Documentação técnica e decisões de arquitetura
+/docs/architecture/ @voidgateway
+/docs/decisions/ @voidgateway
+/docs/design/ @voidgateway
