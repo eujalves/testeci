@@ -1,7 +1,7 @@
 <h1 align="center">Fibrosync</h1>
 
 <p align="center">
-  <em>(Descricção do projeto...)</em>
+  <em>Plataforma <strong>inteligente</strong> para acompanhar pacientes com fibromialgia, com o objetivo de auxiliar nas consultas médicas e no conhecimento da própria doença.</em>
 </p>
 
 <p align="center">
