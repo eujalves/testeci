@@ -1,4 +1,6 @@
-(Descrever o que é o fibrosync...)
+## FibroSync
+
+Plataforma inteligente para acompanhar pacientes com fibromialgia, com o objetivo de auxiliar nas consultas médicas e no conhecimento da própria doença.
 
 ## Tecnologias
 
