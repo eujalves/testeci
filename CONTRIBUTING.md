@@ -2,14 +2,15 @@
 
 Este documento define os padrões básicos para contribuição neste repositório.
 
-Enquanto as bases do projeto, do Jira e do Confluence estiverem sendo estruturadas, alterações estruturais podem ser realizadas sem uma chave `FIB`. Referências inexistentes não devem ser inventadas. Quando a alteração estiver associada a uma tarefa do Jira, o fluxo regular passa a ser obrigatório.
-
 Antes de contribuir, consulte:
 
 - [Git Workflow](docs/workflows/git.flow.md)
 - [Política do changelog](docs/releases/changelog.md)
 
 Para detalhes adicionais sobre arquitetura, ambiente de desenvolvimento e integração com a API (Futuro), consulte a documentação disponível em `docs/`.
+
+A responsabilidade pela documentação é do [confluence](https://aluno-team-zylgcwkh.atlassian.net/wiki/x/sQAw).
+o [Jira](https://aluno-team-zylgcwkh.atlassian.net/jira/software/projects/FIB/boards/34/backlog?atlOrigin=eyJpIjoiOGZhYzc0ZDFmZWUwNDdiYzk2ZTM4N2VmYmZiYzIxZjIiLCJwIjoiaiJ9) organiza o fluxo de trabalho.
 
 ---
 
