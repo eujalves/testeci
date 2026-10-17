@@ -10,3 +10,4 @@ O formato é baseado no [Keep a Changelog](https://keepachangelog.com/en/2.0.0/)
 
 - Estrutura inicial de governança e documentação do projeto.
 - Landing page com apresentação do FibroSync, recursos, novidades e chamada para cadastro.
+- Base de roteamento e html da tela de cadastro de paciente.

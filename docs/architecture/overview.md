@@ -16,8 +16,29 @@ Este documento apresenta a estrutura técnica atual do Fibrosync e suas principa
 
 ```mermaid
 flowchart LR
-    Contexto[Contexto a definir] --> Fibrosync[Fibrosync]
-    Fibrosync --> Dependencias[Dependências a definir]
+    Paciente([Paciente]) --> Navegador[Navegador]
+
+    subgraph Frontend["Frontend — public/"]
+        direction TB
+        Landing["pages/landing<br/>index.html"]
+        Cadastro["pages/cadastro-paciente<br/>index.html · style.css · script.js"]
+        Assets["assets/ (css, js)<br/>img/"]
+        Landing -.-> Assets
+        Cadastro -.-> Assets
+    end
+
+    subgraph Backend["Backend — src/ (a definir)"]
+        direction TB
+        Server["server.js"] --> Routes["route.js"]
+    end
+
+    Navegador --> Landing
+    Navegador --> Cadastro
+    Cadastro -- "envio do formulário" --> Server
+    Routes -.-> Dados[(Persistência<br/>a definir)]
+
+    classDef pendente stroke-dasharray: 5 5
+    class Backend,Server,Routes,Dados pendente
 ```
 
 <!-- Atualizar o diagrama quando os componentes e integrações forem definidos. -->
