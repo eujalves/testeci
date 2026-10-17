@@ -10,15 +10,14 @@
 
 <p align="center">
   <a href="https://fibrosync.com"><b>Fibrosync</b></a>
-  <br><sub>(subtitulo...)</sub>
 </p>
 
 
 
 ## Tecnologias
 
-- 
-- 
+- html, css e js puro
+- node 
 
 ## Documentação
 
