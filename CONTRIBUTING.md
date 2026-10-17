@@ -54,11 +54,7 @@ git merge main
 
 Execute também as verificações disponíveis no projeto:
 
-```bash
-npm run lint
-npm run test
-npm run build
-```
+(ainda a ser decidido)
 
 O Pull Request não deve introduzir erros de lint, build ou testes.
 
