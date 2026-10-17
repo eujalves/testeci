@@ -1,16 +1,16 @@
+<!-- Título obrigatório: FIB-XXX Descrição objetiva -->
+
 ## Jira
 
 [FIB-XXX](https://aluno-team-zylgcwkh.atlassian.net/browse/FIB-XXX)
 
-<!-- Durante a estruturação inicial, indique "Não aplicável" em vez de inventar uma referência. -->
-
 ## Confluence
 
-<!-- Link para o requisito ou a documentação relacionada -->
+<!-- Link para o requisito ou a documentação relacionada; use "Não aplicável" quando não houver -->
 
 ## Figma
 
-<!-- Link para o arquivo, a página ou o frame relacionado, quando aplicável -->
+<!-- Link para o arquivo, a página ou o frame relacionado; use "Não aplicável" quando não houver -->
 
 ## Objetivo
 
@@ -30,7 +30,9 @@
 
 ## Checklist
 
-- [ ] O título contém o identificador do Jira (`[FIB-XXX]`) ou a alteração pertence à estruturação inicial
+- [ ] O título começa com a chave do Jira em maiúsculas (`FIB-XXX Descrição objetiva`)
+- [ ] A branch começa com a mesma chave do Jira (`FIB-XXX-tipo/descricao-curta`)
+- [ ] Todos os commits começam com a mesma chave do Jira (`FIB-XXX tipo: descrição`)
 - [ ] Os critérios de aceite foram validados
 - [ ] Os testes aplicáveis foram executados
 - [ ] O lint e o build foram executados sem erros

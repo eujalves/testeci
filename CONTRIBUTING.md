@@ -1,45 +1,45 @@
 # Contributing
 
-Este documento define os padrões básicos para contribuição neste repositório.
+Este documento resume os padrões de contribuição do Fibrosync. O fluxo completo está em [Git Workflow](docs/workflows/git.flow.md) e a política de releases está em [Política do changelog](docs/releases/changelog.md).
 
-Antes de contribuir, consulte:
+Antes de contribuir, consulte também:
 
-- [Git Workflow](docs/workflows/git.flow.md)
-- [Política do changelog](docs/releases/changelog.md)
-
-Para detalhes adicionais sobre arquitetura, ambiente de desenvolvimento e integração com a API (Futuro), consulte a documentação disponível em `docs/`.
-
-A responsabilidade pela documentação é do [confluence](https://aluno-team-zylgcwkh.atlassian.net/wiki/x/sQAw).
-o [Jira](https://aluno-team-zylgcwkh.atlassian.net/jira/software/projects/FIB/boards/34/backlog?atlOrigin=eyJpIjoiOGZhYzc0ZDFmZWUwNDdiYzk2ZTM4N2VmYmZiYzIxZjIiLCJwIjoiaiJ9) organiza o fluxo de trabalho.
-
----
+- [Jira do Fibrosync](https://aluno-team-zylgcwkh.atlassian.net/jira/software/projects/FIB/boards/34/backlog): tarefas, bugs e acompanhamento do trabalho;
+- [Confluence do Fibrosync](https://aluno-team-zylgcwkh.atlassian.net/wiki/x/sQAw): requisitos e documentação funcional;
+- [Figma do Fibrosync](https://www.figma.com/files/team/1635721117049360128/all-folders?fuid=1635749553250315535): protótipos e referências de interface.
 
 ## Fluxo de desenvolvimento
 
-Antes de iniciar uma nova tarefa:
+Todo trabalho deve estar associado a um item do Jira. Use a chave em letras maiúsculas, como `FIB-123`, na branch, em cada commit e no título do Pull Request. Se o item ainda não existir, crie-o antes de iniciar o desenvolvimento; não invente uma chave.
+
+Atualize a branch principal:
 
 ```bash
 git checkout main
 git pull
 ```
 
-Crie uma branch específica para a tarefa:
+Crie a branch no formato `FIB-XXX-tipo/descricao-curta`:
 
 ```bash
-git checkout -b feat/FIB-15-tela-login
+git checkout -b FIB-123-feat/tela-login
 ```
 
-Após realizar as alterações:
+Após realizar uma alteração lógica:
 
 ```bash
 git add .
-git commit -m "feat(FIB-15): implementar tela de login"
-git push -u origin feat/FIB-15-tela-login
+git commit -m "FIB-123 feat: implementar tela de login"
+git push -u origin FIB-123-feat/tela-login
 ```
 
-Depois, abra um Pull Request para a branch `main`.
+Depois, abra um Pull Request para `main` com o título:
 
----
+```text
+FIB-123 Implementar tela de login
+```
+
+O envio da branch e dos commits para o repositório conectado é necessário para que o Jira reconheça e sincronize os dados de desenvolvimento.
 
 ## Antes de abrir um Pull Request
 
@@ -49,19 +49,19 @@ Certifique-se de que sua branch está atualizada:
 git checkout main
 git pull
 
-git checkout feat/FIB-15-tela-login
+git checkout FIB-123-feat/tela-login
 git merge main
 ```
 
-Execute também as verificações disponíveis no projeto:
+Execute as verificações disponíveis no projeto. O Pull Request não deve introduzir erros de lint, build ou testes.
 
-(ainda a ser decidido)
+Preencha o template do Pull Request, incluindo:
 
-O Pull Request não deve introduzir erros de lint, build ou testes.
-
-Alterações relevantes para uma release devem atualizar a seção `[Não publicado]` do `CHANGELOG.md`. Durante a estruturação inicial, referências inexistentes do Jira ou de Pull Requests não devem ser inventadas.
-
----
+- o link do item no Jira;
+- o link do requisito no Confluence, quando aplicável;
+- o link do arquivo, página ou frame no Figma, quando aplicável;
+- instruções de teste e evidências;
+- a atualização de `[Não publicado]` no `CHANGELOG.md`, quando relevante para uma release.
 
 ## Revisão
 
@@ -69,58 +69,19 @@ Durante a revisão de um Pull Request:
 
 - responda aos comentários realizados;
 - faça as correções na mesma branch;
-- envie novos commits quando necessário;
+- envie novos commits com a mesma chave do Jira;
 - mantenha o Pull Request focado em uma única tarefa ou objetivo.
 
 Evite misturar alterações não relacionadas no mesmo Pull Request.
 
----
-
-## Relação com o Jira
-
-O identificador da tarefa deve acompanhar toda implementação associada a um item registrado no Jira. Alterações pertencentes à estruturação inicial são a exceção temporária a essa regra.
-
-Exemplo:
-
-```text
-Jira
-FIB-15 - Criar tela de login
-
-Branch
-feat/FIB-15-tela-login
-
-Commit
-feat(FIB-15): implementar tela de login
-
-Pull Request
-[FIB-15] Implementar tela de login
-```
-
-Isso facilita o rastreamento entre requisito, implementação e histórico do código.
-
----
-
 ## Resumo
 
-### Branch
-
 ```text
-feat/FIB-15-tela-login
+Jira:         FIB-123 - Criar tela de login
+Branch:       FIB-123-feat/tela-login
+Commit:       FIB-123 feat: implementar tela de login
+Pull Request: FIB-123 Implementar tela de login
 ```
-
-### Commit
-
-```text
-feat(FIB-15): implementar tela de login
-```
-
-### Pull Request
-
-```text
-[FIB-15] Implementar tela de login
-```
-
-Fluxo esperado:
 
 ```text
 Jira
