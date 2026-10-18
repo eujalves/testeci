@@ -102,7 +102,6 @@ Fibrosync/
 │   CHANGELOG.md                            # histórico de mudanças do projeto
 │   CONTRIBUTING.md                         # guia de contribuição
 │   README.md                               # apresentação do projeto
-│   todo.md                                 # lista de tarefas pendentes
 ```
 
 
@@ -112,6 +111,4 @@ O acompanhamento das tarefas, a documentação funcional e os protótipos estão
 
 - [Projeto FIB no Jira](https://aluno-team-zylgcwkh.atlassian.net/jira/software/projects/FIB/summary): backlog, tarefas, bugs e acompanhamento da implementação;
 - [Espaço do Fibrosync no Confluence](https://aluno-team-zylgcwkh.atlassian.net/wiki/spaces/F/overview): requisitos e documentação funcional;
-- [Time do Fibrosync no Figma](https://www.figma.com/files/team/1635721117049360128/all-folders?fuid=1635749553250315535): protótipos e referências de interface.
-
-a
+- [Time do Fibrosync no Figma](https://www.figma.com/files/team/1635721117049360128/all-folders?fuid=1635749553250315535): protótipos e referências de interface. 

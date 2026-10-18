@@ -94,3 +94,10 @@ Pull Request
   ↓
 main
 ```
+
+a escolha foi baseada na documentação da atlassian para a [integração do jira com o git](https://support.atlassian.com/jira-software-cloud/docs/reference-issues-in-your-development-work/)
+
+
+
+
+ _eu que escrevi professora :)_
