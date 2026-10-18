@@ -12,6 +12,10 @@ Antes de contribuir, consulte também:
 
 Todo trabalho deve estar associado a um item do Jira. Use a chave em letras maiúsculas, como `FIB-123`, na branch, em cada commit e no título do Pull Request. Se o item ainda não existir, crie-o antes de iniciar o desenvolvimento; não invente uma chave.
 
+Como exceção, pequenas alterações internas de documentação técnica, automação, configuração, ferramentas ou manutenção simples podem usar diretamente a chave do épico técnico vigente. A exceção deve ser justificada no Pull Request. Funcionalidades, bugs, mudanças de comportamento, segurança, dados, migrações e trabalhos que precisem de acompanhamento individual continuam exigindo tarefa, história ou bug próprio, associado ao épico quando aplicável.
+
+Consulte os critérios completos e a chave vigente em [Git Workflow](docs/workflows/git.flow.md#épico-de-manutenção-técnica).
+
 Atualize a branch principal:
 
 ```bash

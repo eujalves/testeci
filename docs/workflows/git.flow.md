@@ -20,6 +20,43 @@ Não use `fib-123` ou outra variação de maiúsculas e minúsculas. Se ainda n�
 
 O Jira só exibe os dados de desenvolvimento depois que a branch ou os commits são enviados ao repositório conectado. A sincronização pode levar alguns minutos.
 
+### Épico de manutenção técnica
+
+O épico **Fortalecer a base técnica do Fibrosync** agrupa melhorias relacionadas à qualidade interna, à manutenção e às ferramentas do projeto. Sua chave deve ser registrada nesta seção depois que o épico for criado no Jira.
+
+```text
+Épico técnico vigente: a definir no Jira
+```
+
+Por padrão, cada Pull Request deve continuar vinculado a uma tarefa, história ou bug próprio. O item deve ser filho do épico técnico quando fizer parte desse objetivo maior.
+
+Excepcionalmente, um Pull Request pode usar diretamente a chave do épico técnico, sem item próprio, quando **todos** os critérios abaixo forem atendidos:
+
+- a alteração é pequena, interna e de baixo risco;
+- o trabalho cabe em um único Pull Request;
+- não existe requisito funcional ou critério de aceite independente;
+- a alteração trata somente de documentação técnica, automação, configuração, ferramentas ou manutenção simples;
+- o uso direto do épico é identificado e justificado no template do Pull Request.
+
+Crie um item próprio quando a alteração:
+
+- adiciona ou modifica comportamento visível ao usuário;
+- corrige um bug identificável;
+- envolve segurança, dados, migração ou dependências de alto impacto;
+- precisa de estimativa, responsável, prioridade ou acompanhamento individual;
+- pode ser entregue, revertida ou validada separadamente;
+- reúne mais de um objetivo técnico.
+
+O épico não deve funcionar como uma chave permanente para qualquer alteração sem relação entre si. Ele deve representar um objetivo técnico delimitado, reunir seus itens filhos e ser encerrado quando esse objetivo for concluído. Em caso de dúvida, crie uma tarefa ou um bug próprio e associe-o ao épico.
+
+Essa convenção distingue a capacidade técnica da integração da organização recomendada para o backlog: o Jira aceita a chave de qualquer item em branches, commits e Pull Requests, mas a Atlassian define épicos como grandes corpos de trabalho e itens padrão como o local do trabalho diário.
+
+Referências oficiais:
+
+- [Referenciar itens do Jira no trabalho de desenvolvimento](https://support.atlassian.com/jira-software-cloud/docs/reference-issues-in-your-development-work/)
+- [O que é um épico](https://support.atlassian.com/jira-software-cloud/docs/what-is-an-epic/)
+- [Tipos e hierarquia de itens](https://support.atlassian.com/jira-cloud-administration/docs/what-are-issue-types/)
+
 ## 2. Fluxo de desenvolvimento
 
 Atualize a branch principal:
@@ -178,6 +215,8 @@ FIB-123 Implementar tela de login
 A chave deve aparecer no início do título, sem ser substituída por links ou texto em letras minúsculas. O Jira também pode reconhecer o Pull Request pela chave na branch de origem, mas o título continua obrigatório para manter o padrão do repositório e uma associação explícita.
 
 O Pull Request deve ter `main` como destino, permanecer focado em um único item do Jira e explicar o que mudou e como validar a implementação.
+
+Quando for aplicada a exceção de vínculo direto ao épico técnico, o Pull Request deve permanecer focado em uma única alteração e registrar por que ela não justifica um item próprio.
 
 ### Template do Pull Request
 
