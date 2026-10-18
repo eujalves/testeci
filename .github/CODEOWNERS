@@ -3,9 +3,21 @@
 # Responsável padrão pelo repositório
 * @voidgateway
 
+# Revisão de pr
+* @voidgateway
+* @Laissafr
+
 # Documentação técnica e decisões de arquitetura
 /docs/architecture/ @voidgateway
 /docs/decisions/ @voidgateway
 /docs/design/ @voidgateway
-/public/pages/cadastro-paciente @voidgateway
+/docs @voidgateway
 
+# Páginas
+/public/pages/landing-page @Laissafr
+/public/pages/login-paciente @ViviannySantos-droid
+/public/pages/cadastro-paciente @eujalves
+/public/pages/cadastro-completo @eujalves
+
+# Stack e questões tecnicas
+/src @voidgateway

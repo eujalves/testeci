@@ -2,6 +2,12 @@
 
 Este documento define o padrão de branches, commits e Pull Requests do Fibrosync. A chave do item no Jira conecta essas atividades ao painel de desenvolvimento e permite rastrear o trabalho até builds e deployments.
 
+## CHAVE EPICO
+**TECNICO**
+```text
+FIB-74
+```
+
 ## 1. Regra principal do Jira
 
 Todo trabalho deve estar associado a um item do Jira. A chave deve ser escrita em letras maiúsculas e acompanhar todo o fluxo.
@@ -22,10 +28,10 @@ O Jira só exibe os dados de desenvolvimento depois que a branch ou os commits s
 
 ### Épico de manutenção técnica
 
-O épico **Fortalecer a base técnica do Fibrosync** agrupa melhorias relacionadas à qualidade interna, à manutenção e às ferramentas do projeto. Sua chave deve ser registrada nesta seção depois que o épico for criado no Jira.
+O épico **TECNICO** agrupa melhorias relacionadas à qualidade interna, à manutenção e às ferramentas do projeto.
 
 ```text
-Épico técnico vigente: a definir no Jira
+FIB-74 TECNICO
 ```
 
 Por padrão, cada Pull Request deve continuar vinculado a uma tarefa, história ou bug próprio. O item deve ser filho do épico técnico quando fizer parte desse objetivo maior.
@@ -38,7 +44,7 @@ Excepcionalmente, um Pull Request pode usar diretamente a chave do épico técni
 - a alteração trata somente de documentação técnica, automação, configuração, ferramentas ou manutenção simples;
 - o uso direto do épico é identificado e justificado no template do Pull Request.
 
-Crie um item próprio quando a alteração:
+Criar um item próprio quando a alteração:
 
 - adiciona ou modifica comportamento visível ao usuário;
 - corrige um bug identificável;
@@ -47,9 +53,7 @@ Crie um item próprio quando a alteração:
 - pode ser entregue, revertida ou validada separadamente;
 - reúne mais de um objetivo técnico.
 
-O épico não deve funcionar como uma chave permanente para qualquer alteração sem relação entre si. Ele deve representar um objetivo técnico delimitado, reunir seus itens filhos e ser encerrado quando esse objetivo for concluído. Em caso de dúvida, crie uma tarefa ou um bug próprio e associe-o ao épico.
-
-Essa convenção distingue a capacidade técnica da integração da organização recomendada para o backlog: o Jira aceita a chave de qualquer item em branches, commits e Pull Requests, mas a Atlassian define épicos como grandes corpos de trabalho e itens padrão como o local do trabalho diário.
+Em caso de dúvida, crie uma tarefa ou um bug próprio e associe-o ao épico.
 
 Referências oficiais:
 
@@ -218,6 +222,8 @@ O Pull Request deve ter `main` como destino, permanecer focado em um único item
 
 Quando for aplicada a exceção de vínculo direto ao épico técnico, o Pull Request deve permanecer focado em uma única alteração e registrar por que ela não justifica um item próprio.
 
+A usar o epico `TECNICO` é possivel modificar/remover os itens presentes no checklist do template do pr
+
 ### Template do Pull Request
 
 O modelo oficial está em [`.github/pull_request_template.md`](../../.github/pull_request_template.md) e é carregado automaticamente pelo GitHub.
@@ -233,7 +239,7 @@ Preencha:
 - o checklist de validação;
 - a atualização do changelog, quando aplicável.
 
-Não remova os campos de Confluence e Figma. Quando um deles não se aplicar, registre `Não aplicável`.
+Não remova os campos de Confluence e Figma. Quando um deles não se aplicar, registre `Não aplicável`, salvo uso do epico `TECNICO`.
 
 ## 6. Evidências
 
