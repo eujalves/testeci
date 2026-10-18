@@ -19,7 +19,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     if (cadastrarBtn) {
         cadastrarBtn.addEventListener("click", () => {
-            window.location.href = "/public/pages/cadastro-completo/index.html";
+            window.location.href = "/public/pages/cadastro-p2/index.html";
         });
     }
 

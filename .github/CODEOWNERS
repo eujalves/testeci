@@ -16,8 +16,8 @@
 # Páginas
 /public/pages/landing-page @Laissafr
 /public/pages/login-paciente @ViviannySantos-droid
-/public/pages/cadastro-paciente @eujalves
-/public/pages/cadastro-completo @eujalves
+/public/pages/cadastro-p1 @eujalves
+/public/pages/cadastro-p2 @eujalves
 
 # Stack e questões técnicas
 /src @voidgateway

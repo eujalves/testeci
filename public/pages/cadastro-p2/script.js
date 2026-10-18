@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
-    const formulario = document.getElementById("form-cadastro-completo");
+    const formulario = document.getElementById("form-cadastro-p2");
     const campoGenero = document.getElementById("genero");
     const campoDataNascimento = document.getElementById("data-nascimento");
     const campoData = campoDataNascimento.closest(".campo-data");
@@ -101,7 +101,7 @@ document.addEventListener("DOMContentLoaded", () => {
         };
 
         try {
-            sessionStorage.setItem("fibrosync-cadastro-completo", JSON.stringify(dadosComplementares));
+            sessionStorage.setItem("fibrosync-cadastro-p2", JSON.stringify(dadosComplementares));
         } catch {
             mensagemStatus.textContent = "Não foi possível salvar os dados. Tente novamente.";
             return;

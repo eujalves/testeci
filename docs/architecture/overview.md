@@ -21,7 +21,7 @@ flowchart LR
     subgraph Frontend["Frontend — public/"]
         direction TB
         Landing["pages/landing<br/>index.html"]
-        Cadastro["pages/cadastro-paciente<br/>index.html · style.css · script.js"]
+        Cadastro["pages/cadastro-p1<br/>index.html · style.css · script.js"]
         Assets["assets/ (css, js)<br/>img/"]
         Landing -.-> Assets
         Cadastro -.-> Assets

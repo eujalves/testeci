@@ -82,7 +82,7 @@ Fibrosync/
 │   │       logo_texto.png                  # logo com o nome Fibrosync
 │   │
 │   └───pages/                              # uma pasta por tela
-│       ├───cadastro-paciente/
+│       ├───cadastro-p1/
 │       │       index.html                  # estrutura da tela de cadastro
 │       │       script.js                   # interações (ex.: mostrar/esconder senha)
 │       │       style.css                   # estilos da tela de cadastro
