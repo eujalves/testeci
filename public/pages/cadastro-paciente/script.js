@@ -25,7 +25,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     if (entrarBtn) {
         entrarBtn.addEventListener("click", () => {
-            window.location.href = "/public/pages/login-paciente/login.html";
+            window.location.href = "/public/pages/login-paciente/index.html";
         });
     }
 });
