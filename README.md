@@ -8,9 +8,6 @@
   <img src="docs/design/assets/fibrosync.png" alt="Logo do fibrosync" width="20%">
 </p>
 
-<p align="center">
-  <a href="https://fibrosync.com"><b>Fibrosync</b></a>
-</p>
 
 
 
