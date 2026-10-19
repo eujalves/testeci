@@ -60,13 +60,14 @@ D Fibrosync/
 │   │   └── F git.flow.md                  # fluxo de branches, commits e PRs
 │   └── F README.md                        # índice da documentação
 ├── D public/                              # arquivos estáticos servidos ao navegador
-│   ├── D img/                             # imagens usadas nas páginas
+│   ├── D assets/                          # recursos estáticos compartilhados
+│   │   └── D img/                         # imagens usadas nas páginas
 │   └── D pages/                           # uma pasta por tela
-│       ├── D cadastro-p1/
+│       ├── D cadastro/
 │       │   ├── F index.html
 │       │   ├── F script.js
 │       │   └── F style.css
-│       ├── D cadastro-p2/
+│       ├── D dados-complementares/
 │       │   ├── F index.html
 │       │   ├── F script.js
 │       │   └── F style.css
