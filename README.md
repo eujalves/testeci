@@ -14,7 +14,7 @@
 ## Tecnologias
 
 - html, css e js puro
-- node 
+- node (talvez)
 
 ## Documentação
 
@@ -29,63 +29,64 @@
 ## Estrutura do projeto
 
 ```text
-📁 Fibrosync/
-├── 📁 .github/                             # configurações do GitHub
-│   ├── 📄 CODEOWNERS                       # responsáveis pela revisão de cada área
-│   └── 📄 pull_request_template.md         # modelo de descrição dos Pull Requests
-├── 📁 docs/                                # documentação técnica do projeto
-│   ├── 📁 accessibility/
-│   │   └── 📄 overview.md                  # diretrizes de acessibilidade
-│   ├── 📁 api/
-│   │   └── 📄 overview.md                  # relação com a API e seu contrato
-│   ├── 📁 architecture/
-│   │   └── 📄 overview.md                  # visão geral da arquitetura e componentes
-│   ├── 📁 decisions/
-│   │   ├── 📄 overview.md                  # mapa das decisões de arquitetura (ADRs)
-│   │   └── 📄 template.md                  # modelo para novos ADRs
-│   ├── 📁 design/
-│   │   ├── 📁 assets/
-│   │   │   └── 🖼️ fibrosync.png            # logo usada na documentação
-│   │   └── 📄 overview.md                  # referências de design e identidade visual
-│   ├── 📁 development/
-│   │   └── 📄 setup.md                     # configuração do ambiente de desenvolvimento
-│   ├── 📁 operations/
-│   │   └── 📄 deployment.md                # processo de deploy
-│   ├── 📁 releases/
-│   │   ├── 📄 changelog.md                 # política de uso do CHANGELOG.md
-│   │   └── 📄 overview.md                  # ligação entre versões do Jira e releases do GitHub
-│   ├── 📁 testing/
-│   │   └── 📄 strategy.md                  # estratégia de testes
-│   ├── 📁 workflows/
-│   │   └── 📄 git.flow.md                  # fluxo de branches, commits e PRs
-│   └── 📄 README.md                        # índice da documentação
-├── 📁 public/                              # arquivos estáticos servidos ao navegador
-│   ├── 📁 img/                             # imagens usadas nas páginas
-│   └── 📁 pages/                           # uma pasta por tela
-│       ├── 📁 cadastro-p1/
-│       │   ├── 📄 index.html
-│       │   ├── 📄 script.js
-│       │   └── 📄 style.css
-│       ├── 📁 cadastro-p2/
-│       │   ├── 📄 index.html
-│       │   ├── 📄 script.js
-│       │   └── 📄 style.css
-│       ├── 📁 landing-page/
-│       │   ├── 📄 index.html
-│       │   └── 📄 style.css
-│       └── 📁 login-paciente/
-│           ├── 📄 index.html
-│           ├── 📄 script.js
-│           └── 📄 style.css
-├── 📁 src/                                 # código do servidor (Node)
-│   ├── 📄 route.js                         # definição das rotas
-│   └── 📄 server.js                        # inicialização do servidor
-├── 📄 .gitignore                           # arquivos ignorados pelo Git
-├── 📄 CHANGELOG.md                         # histórico de mudanças do projeto
-├── 📄 CONTRIBUTING.md                      # guia de contribuição
-├── 📄 README.md                            # apresentação do projeto
-└── 📄 todo.md                              # tarefas pendentes
+D Fibrosync/
+├── D .github/                             # configurações do GitHub
+│   ├── F CODEOWNERS                       # responsáveis pela revisão de cada área
+│   └── F pull_request_template.md         # modelo de descrição dos Pull Requests
+├── D docs/                                # documentação técnica do projeto
+│   ├── D accessibility/
+│   │   └── F overview.md                  # diretrizes de acessibilidade
+│   ├── D api/
+│   │   └── F overview.md                  # relação com a API e seu contrato
+│   ├── D architecture/
+│   │   └── F overview.md                  # visão geral da arquitetura e componentes
+│   ├── D decisions/
+│   │   ├── F overview.md                  # mapa das decisões de arquitetura (ADRs)
+│   │   └── F template.md                  # modelo para novos ADRs
+│   ├── D design/
+│   │   ├── D assets/
+│   │   │   └── P fibrosync.png            # logo usada na documentação
+│   │   └── F overview.md                  # referências de design e identidade visual
+│   ├── D development/
+│   │   └── F setup.md                     # configuração do ambiente de desenvolvimento
+│   ├── D operations/
+│   │   └── F deployment.md                # processo de deploy
+│   ├── D releases/
+│   │   ├── F changelog.md                 # política de uso do CHANGELOG.md
+│   │   └── F overview.md                  # ligação entre versões do Jira e releases do GitHub
+│   ├── D testing/
+│   │   └── F strategy.md                  # estratégia de testes
+│   ├── D workflows/
+│   │   └── F git.flow.md                  # fluxo de branches, commits e PRs
+│   └── F README.md                        # índice da documentação
+├── D public/                              # arquivos estáticos servidos ao navegador
+│   ├── D img/                             # imagens usadas nas páginas
+│   └── D pages/                           # uma pasta por tela
+│       ├── D cadastro-p1/
+│       │   ├── F index.html
+│       │   ├── F script.js
+│       │   └── F style.css
+│       ├── D cadastro-p2/
+│       │   ├── F index.html
+│       │   ├── F script.js
+│       │   └── F style.css
+│       ├── D landing-page/
+│       │   ├── F index.html
+│       │   └── F style.css
+│       └── D login-paciente/
+│           ├── F index.html 
+│           ├── F script.js
+│           └── F style.css
+├── D src/                                 # servidor (caso seja possivel ) :(
+│   ├── F route.js                         # definição das rotas
+│   └── F server.js                        # codigo do servidor
+├── F .gitignore                           # arquivos ignorados pelo Git
+├── F CHANGELOG.md                         # histórico de mudanças do projeto
+├── F CONTRIBUTING.md                      # guia de contribuição
+├── F README.md                            # apresentação do projeto
+└── F todo.md                              # tarefas pendentes (não versionado)
 ```
+_gerado por [edr](https://github.com/solidiquis/erdtree)_
 
 
 ## Gestão do projeto
