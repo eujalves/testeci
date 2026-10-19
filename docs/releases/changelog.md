@@ -1,6 +1,6 @@
 # Política do changelog
 
-O `CHANGELOG.md` comunica as alterações relevantes de cada versão do Fibrosync. Ele não substitui o Jira, o Confluence, os Pull Requests ou o histórico de commits.
+O `CHANGELOG.md` comunica as alterações relevantes de cada versão do Fibrosync. Ele **não substitui** o Jira, o Confluence, os Pull Requests ou o histórico de commits.
 
 O formato adotado é baseado no [Keep a Changelog](https://keepachangelog.com/en/2.0.0/) e utiliza [Versionamento Semântico](https://semver.org/).
 

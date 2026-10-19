@@ -1,8 +1,14 @@
 document.addEventListener("DOMContentLoaded", () => {
+    const formulario = document.getElementById("form-cadastro");
+    const inputNome = document.getElementById("nome");
     const inputSenha = document.getElementById("senha");
     const toggleSenha = document.getElementById("toggle-senha");
-    const cadastrarBtn = document.getElementById("cadastrar-btn");
     const entrarBtn = document.getElementById("entrar-btn");
+
+    function validarTextoPreenchido(campo, mensagem) {
+        const preenchido = campo.value.trim().length > 0;
+        campo.setCustomValidity(preenchido ? "" : mensagem);
+    }
 
     if (inputSenha && toggleSenha) {
         // Alterna entre senha oculta (pontos) e visível.
@@ -17,8 +23,28 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 
-    if (cadastrarBtn) {
-        cadastrarBtn.addEventListener("click", () => {
+    if (formulario) {
+        [inputNome, inputSenha].forEach((campo) => {
+            campo.addEventListener("input", () => campo.setCustomValidity(""));
+        });
+
+        formulario.addEventListener("submit", (evento) => {
+            evento.preventDefault();
+
+            validarTextoPreenchido(inputNome, "Informe seu nome.");
+            validarTextoPreenchido(inputSenha, "Informe uma senha.");
+
+            if (!formulario.checkValidity()) {
+                formulario.reportValidity();
+                return;
+            }
+
+            // vou incluir o envio do formulario em outra entrega, 
+            // preciso definir como funcionara o mokeup dos dados, 
+            // como não ha back apenas mando direto para a proxima pagina, 
+            // não quero usar o sessionStorage ou localStorage
+            // isso vale para as duas paginas (cadastro-p1 e cadastro-p2)
+
             window.location.href = "/public/pages/cadastro-p2/index.html";
         });
     }

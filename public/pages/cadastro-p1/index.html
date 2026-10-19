@@ -13,7 +13,7 @@
         <div class="container">
             <h1>Crie sua conta</h1>
             <p class="tagline">Preencha seus dados</p>
-            <form id="form-cadastro" action="" method="POST">
+            <form id="form-cadastro">
                 <div class="campo">
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path fill-rule="evenodd" clip-rule="evenodd"
@@ -62,10 +62,10 @@
                         </svg>
                     </button>
                     </br>
-                    <input type="checkbox" id="termos" name="Termos" />
+                    <input type="checkbox" id="termos" name="termos" required>
                     <label for="termos">Li e concordo com o termo de uso </label>
                     </br>
-                    <input type="button" id="cadastrar-btn" value="Cadastrar" required>
+                    <button type="submit" id="cadastrar-btn">Cadastrar</button>
                 </div>
                 <div class="side">
                     <img src="/public/img/logo_texto.png" alt="Logo do Fibrosync" class="logo">

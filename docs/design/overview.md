@@ -1,12 +1,13 @@
+<!-- esqueleto de arquivo, ainda tem que definir com o a prof como será a entrega de dados -->
 # Design
 
-Este documento conecta os protótipos do Fibrosync à implementação, sem duplicar as especificações mantidas no Figma.
+// A definir
 
 ## Fonte principal
 
-[Time do Fibrosync no Figma](https://www.figma.com/files/team/1635721117049360128/all-folders?fuid=1635749553250315535)
+[Figma](https://www.figma.com/files/team/1635721117049360128/all-folders?fuid=1635749553250315535)
 
-Documentos e tarefas relacionados a uma interface devem apontar para o arquivo, a página ou o frame específico do Figma.
+Documentos e tarefas relacionados a uma interface devem apontar para o arquivo, a página ou o frame do Figma.
 
 ## Artefatos
 
@@ -33,4 +34,4 @@ Documentos e tarefas relacionados a uma interface devem apontar para o arquivo, 
 
 ## Acessibilidade
 
-Os critérios e decisões de acessibilidade estão documentados em [Acessibilidade](../accessibility/overview.md).
+Os critérios e decisões de acessibilidade estão documentados em [Acessibilidade](../accessibility/overview.md). (_quando for escolhido)

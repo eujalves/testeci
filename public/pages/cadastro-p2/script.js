@@ -92,20 +92,12 @@ document.addEventListener("DOMContentLoaded", () => {
             return;
         }
 
-        const historicoSelecionado = opcoesHistorico.find((opcao) => opcao.checked);
-        const dadosComplementares = {
-            preencherDepois: preencherDepois.checked,
-            genero: preencherDepois.checked ? null : campoGenero.value,
-            dataNascimento: preencherDepois.checked ? null : campoDataNascimento.value,
-            historicoCondicao: preencherDepois.checked ? null : historicoSelecionado.value,
-        };
-
-        try {
-            sessionStorage.setItem("fibrosync-cadastro-p2", JSON.stringify(dadosComplementares));
-        } catch {
-            mensagemStatus.textContent = "Não foi possível salvar os dados. Tente novamente.";
-            return;
-        }
+        // vou incluir o envio do formulario em outra entrega, 
+            // preciso definir como funcionara o mokeup dos dados, 
+            // como não ha back apenas mando direto para a procimapagina, 
+            // não quero usar o sessionStorage ou localStorage
+            // isso vale para as duas paginas (cadastro-p1 e cadastro-p2)
+//fui eu que escrevi, viu vanessa
 
         window.location.href = "/public/pages/home/index.html";
     });
