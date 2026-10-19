@@ -78,7 +78,7 @@ select {
     line-height: 1.35;
 }
 
-#form-cadastro-p2 {
+#form-dados-complementares {
     margin-top: 0;
 }
 
@@ -86,7 +86,7 @@ select {
     margin-top: clamp(30px, 4vh, 44px);
 }
 
-#form-cadastro-p2 > .grupo-campo:first-child {
+#form-dados-complementares > .grupo-campo:first-child {
     margin-top: 0;
 }
 

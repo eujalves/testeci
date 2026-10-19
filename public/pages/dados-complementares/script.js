@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
-    const formulario = document.getElementById("form-cadastro-p2");
+    const formulario = document.getElementById("form-dados-complementares");
     const campoGenero = document.getElementById("genero");
     const campoDataNascimento = document.getElementById("data-nascimento");
     const campoData = campoDataNascimento.closest(".campo-data");
@@ -96,7 +96,7 @@ document.addEventListener("DOMContentLoaded", () => {
             // preciso definir como funcionara o mokeup dos dados, 
             // como não ha back apenas mando direto para a procimapagina, 
             // não quero usar o sessionStorage ou localStorage
-            // isso vale para as duas paginas (cadastro-p1 e cadastro-p2)
+            // isso vale para as duas paginas (cadastro e dados-complementares)
 //fui eu que escrevi, viu vanessa
 
         window.location.href = "/public/pages/home/index.html";

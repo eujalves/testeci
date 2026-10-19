@@ -43,9 +43,9 @@ document.addEventListener("DOMContentLoaded", () => {
             // preciso definir como funcionara o mokeup dos dados, 
             // como não ha back apenas mando direto para a proxima pagina, 
             // não quero usar o sessionStorage ou localStorage
-            // isso vale para as duas paginas (cadastro-p1 e cadastro-p2)
+            // isso vale para as duas paginas (cadastro e dados-complementares)
 
-            window.location.href = "/public/pages/cadastro-p2/index.html";
+            window.location.href = "/public/pages/dados-complementares/index.html";
         });
     }
 
