@@ -1,6 +1,7 @@
+<!-- esqueleto de arquivo, ainda tem que definir com o a prof como será a entrega de dados -->
 # Estratégia de testes
 
-Este documento registra os níveis de teste, responsabilidades e critérios de validação do Fibrosync.
+// A definir
 
 ## Níveis de teste
 
@@ -27,4 +28,4 @@ Este documento registra os níveis de teste, responsabilidades e critérios de v
 
 ## Integração contínua
 
-Os testes automatizados farão parte do workflow de CI quando a stack e os comandos do projeto estiverem definidos.
+Os testes automatizados farão parte do workflow de CI quando _(se)_ a stack e os comandos do projeto estiverem definidos.

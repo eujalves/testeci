@@ -1,15 +1,16 @@
+<!-- esqueleto de arquivo, ainda tem que definir com o a prof como será a entrega de dados -->
 # Decisões de arquitetura
 
-Este diretório centraliza as decisões técnicas relevantes para a arquitetura do frontend do Fibrosync e mantém sua relação com as tarefas do projeto no Jira.
+Este diretório centraliza as decisões técnicas relevantes para a arquitetura do frontend do Fibrosync e mantém sua relação com as tarefas do projeto no Jira, documentação no Confluence e prototipos no Figma.
 
 ## Fontes relacionadas
 
 | Fonte | Responsabilidade | Link |
 |---|---|---|
-| Jira | Tarefas e contexto de execução | [Projeto FIB](https://aluno-team-zylgcwkh.atlassian.net/jira/software/projects/FIB/summary) |
-| Confluence | Requisitos e documentação funcional | [Espaço do Fibrosync](https://aluno-team-zylgcwkh.atlassian.net/wiki/spaces/F/overview) |
-| Figma | Protótipos e decisões de interface | [Time do Fibrosync](https://www.figma.com/files/team/1635721117049360128/all-folders?fuid=1635749553250315535) |
-| GitHub | Implementação e revisão do código | Pull Requests do repositório |
+| Jira | Tarefas e contexto de execução | [FIB no jira](https://aluno-team-zylgcwkh.atlassian.net/jira/software/projects/FIB/summary) |
+| Confluence | Requisitos e documentação funcional | [Fibrosync](https://aluno-team-zylgcwkh.atlassian.net/wiki/spaces/F/overview) |
+| Figma | Protótipos e decisões de interface | [Fibrosync](https://www.figma.com/files/team/1635721117049360128/all-folders?fuid=1635749553250315535) |
+| GitHub | Implementação e revisão do código | [Fibrosyn](https://https://github.com/voidgateway/Fibrosync) |
 
 ## Mapa de decisões
 
@@ -49,14 +50,5 @@ ADR
   ↓
 Pull Request
   ↓
-Código
+Main
 ```
-
-## Papel de cada
-
-- O Confluence concentra os requisitos e a documentação funcional.
-- O Figma concentra os protótipos e as referências de interface.
-- O Jira concentra a tarefa e o contexto de execução.
-- O ADR preserva a decisão arquitetural e sua justificativa.
-- O Pull Request registra a implementação.
-- O código representa o estado atual da decisão no projeto.

@@ -1,6 +1,7 @@
+<!-- esqueleto de arquivo, ainda tem que definir com o a prof como será a entrega de dados -->
 # Deploy
 
-Este documento apresenta os ambientes e o fluxo de entrega do Fibrosync.
+// A definir
 
 ## Ambientes
 
@@ -30,4 +31,4 @@ Validação
 
 ## Jira
 
-Builds e deployments devem manter a associação com a tarefa `FIB-XXX` correspondente.
+Builds e deployments (se houver(sla como escreve)) devem manter a associação com a tarefa `FIB-XXX` correspondente.

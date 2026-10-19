@@ -1,6 +1,7 @@
+<!-- esqueleto de arquivo, ainda tem que definir com o a prof como será a entrega de dados -->
 # Configuração do ambiente
 
-Este documento concentra os requisitos e os passos necessários para executar o Fibrosync localmente.
+// A definir
 
 ## Pré-requisitos
 
@@ -11,16 +12,17 @@ Este documento concentra os requisitos e os passos necessários para executar o 
 ## Instalação
 
 ```bash
-# A definir após a escolha da stack e do gerenciador de pacotes.
+# A definir após a escolha da stack, possivelmente node com pnpm (tem que ver com o ronaldo).
 ```
 
 ## Variáveis de ambiente
+
+`.env.example`
 
 | Variável | Obrigatória | Descrição | Exemplo seguro |
 |---|---|---|---|
 | — | — | A definir | — |
 
-Valores secretos não devem ser registrados neste documento ou enviados ao repositório.
 
 ## Execução local
 

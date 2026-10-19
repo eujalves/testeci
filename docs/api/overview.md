@@ -1,6 +1,7 @@
+<!-- esqueleto de arquivo, ainda tem que definir com o a prof como será a entrega de dados -->
 # API
 
-Este documento registra a relação do Fibrosync com a API e aponta para o contrato que representa sua fonte de verdade.
+// A definir
 
 ## Contrato
 
