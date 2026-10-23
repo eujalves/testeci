@@ -34,6 +34,7 @@ npm run preview
 
 ```bash
 npm run lint       # valida HTML, CSS e JavaScript
+npm run check:links # valida referências a arquivos locais
 npm run build      # gera os arquivos de produção em dist/
 npm run check      # executa todas as verificações do CI
 ```

@@ -7,6 +7,14 @@ export default [
   },
   js.configs.recommended,
   {
+    files: ["*.js", "scripts/**/*.mjs"],
+    languageOptions: {
+      ecmaVersion: "latest",
+      sourceType: "module",
+      globals: globals.node,
+    },
+  },
+  {
     files: ["public/**/*.js"],
     languageOptions: {
       ecmaVersion: "latest",

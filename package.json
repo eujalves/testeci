@@ -13,8 +13,9 @@
     "lint": "npm run lint:html && npm run lint:css && npm run lint:js",
     "lint:html": "html-validate \"public/**/*.html\"",
     "lint:css": "stylelint \"public/**/*.css\"",
-    "lint:js": "eslint \"public/**/*.js\"",
-    "check": "npm run lint && npm run build"
+    "lint:js": "eslint .",
+    "check:links": "node scripts/check-links.mjs",
+    "check": "npm run lint && npm run check:links && npm run build"
   },
   "devDependencies": {
     "@eslint/js": "^10.0.1",
