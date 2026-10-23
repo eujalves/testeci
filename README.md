@@ -61,7 +61,16 @@ D Fibrosync/
 │   └── F README.md                        # índice da documentação
 ├── D public/                              # arquivos estáticos servidos ao navegador
 │   ├── D assets/                          # recursos estáticos compartilhados
+│   │   ├── D css/
+│   │   │   └── F tokens.css              # variáveis de estilo compartilhadas
 │   │   └── D img/                         # imagens usadas nas páginas
+│   │       ├── P ap.png
+│   │       ├── P face.png
+│   │       ├── P g.png
+│   │       ├── P ilustracao-dor.png
+│   │       ├── P logo_icone.png
+│   │       ├── P logo_texto.png
+│   │       └── P logo-removebg-preview.png
 │   └── D pages/                           # uma pasta por tela
 │       ├── D cadastro/
 │       │   ├── F index.html
@@ -79,7 +88,8 @@ D Fibrosync/
 │           ├── F script.js
 │           └── F style.css
 ├── D src/                                 # servidor (caso seja possivel ) :(
-│   ├── F route.js                         # definição das rotas
+│   ├── F estrutura.txt                    # anotações sobre a estrutura do projeto
+│   ├── F routes.js                        # definição das rotas
 │   └── F server.js                        # codigo do servidor
 ├── F .gitignore                           # arquivos ignorados pelo Git
 ├── F CHANGELOG.md                         # histórico de mudanças do projeto
