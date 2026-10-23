@@ -1,0 +1,23 @@
+# Definição inicial; responsáveis adicionais ainda serão definidos.
+
+# Responsável padrão pelo repositório
+* @voidgateway
+
+# Revisão de merge request
+* @voidgateway
+* @Laissafr
+
+# Documentação técnica e decisões de arquitetura
+/docs/architecture/ @voidgateway
+/docs/decisions/ @voidgateway
+/docs/design/ @voidgateway
+/docs @voidgateway
+
+# Páginas
+/public/pages/landing-page @Laissafr
+/public/pages/login-paciente @ViviannySantos-droid
+/public/pages/cadastro @eujalves
+/public/pages/dados-complementares @eujalves
+
+# Stack e questões técnicas
+/src @voidgateway
