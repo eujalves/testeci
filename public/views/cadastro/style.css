@@ -27,7 +27,7 @@ body {
     overflow-x: hidden;
     background: var(--lilas-fundo);
     color: var(--texto);
-    font-family: "Poppins", Arial, Helvetica, sans-serif;
+    font-family: Poppins, Arial, Helvetica, sans-serif;
 }
 
 main {
@@ -38,6 +38,7 @@ main {
 .container {
     --card-gap-x: clamp(24px, 4vw, 54px);
     --card-gap-y: clamp(24px, 5vh, 50px);
+
     position: relative;
     display: grid;
     grid-template-columns: minmax(300px, 37%) minmax(0, 1fr);
@@ -109,10 +110,10 @@ main {
     --label-gap: 10px;
     --input-h: 68px;
     --icone: 20px;
+
     position: relative;
     grid-column: 2;
-    align-self: start;
-    justify-self: center;
+    place-self: start center;
     width: min(78%, 900px);
     margin-right: var(--card-gap-x);
 }
@@ -322,12 +323,12 @@ main {
 
 #entrar-btn {
     width: min(72%, 340px);
+    border: 2px solid #111;
     border-radius: 30px;
-    stroke: 2px solid #111;
     margin-top: auto;
 }
 
-@media (max-width: 1050px) {
+@media (width <= 1050px) {
     main,
     .container {
         min-height: 100vh;
@@ -361,7 +362,7 @@ main {
     }
 }
 
-@media (max-width: 850px) {
+@media (width <= 850px) {
     body {
         padding: 0;
         background: var(--branco);
@@ -438,6 +439,8 @@ main {
     }
 
     .campo {
+        --input-h: 62px;
+
         grid-column: 1;
         min-width: 0;
         width: min(calc(100% - 40px), 560px);
@@ -457,10 +460,6 @@ main {
         margin-bottom: 50px;
     }
 
-    .campo {
-        --input-h: 62px;
-    }
-
     #termos {
         margin-left: 4px;
     }
@@ -472,7 +471,7 @@ main {
     }
 }
 
-@media (max-width: 390px) {
+@media (width <= 390px) {
     .campo label[for="termos"] {
         font-size: 0.88rem;
     }

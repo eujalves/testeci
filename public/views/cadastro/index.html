@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fibrosync</title>
-    <link rel="stylesheet" href="/public/pages/cadastro/style.css">
+    <link rel="stylesheet" href="/views/cadastro/style.css">
 </head>
 
 <body>
@@ -42,7 +42,8 @@
                             fill="#FB18AF" />
                     </svg>
                     <label for="senha">Senha:</label>
-                    <input type="password" id="senha" name="senha" placeholder="Senha:" required>
+                    <input type="password" id="senha" name="senha" placeholder="Senha:" autocomplete="new-password"
+                        required>
                     <button type="button" id="toggle-senha" class="toggle-senha" aria-label="Mostrar senha"
                         aria-controls="senha" aria-pressed="false">
                         <svg class="icone-mostrar" width="18" height="13" viewBox="0 0 18 13" fill="none"
@@ -61,23 +62,23 @@
                                 fill="#FB18AF" />
                         </svg>
                     </button>
-                    </br>
+                    <br>
                     <input type="checkbox" id="termos" name="termos" required>
                     <label for="termos">Li e concordo com o termo de uso </label>
-                    </br>
+                    <br>
                     <button type="submit" id="cadastrar-btn">Cadastrar</button>
                 </div>
                 <div class="side">
-                    <img src="/public/assets/img/logo_texto.png" alt="Logo do Fibrosync" class="logo">
+                    <img src="/assets/img/logo_texto.png" alt="Logo do Fibrosync" class="logo">
                     <h1>Bem-Vindo!💜</h1>
                     <p>Acesse sua conta agora mesmo.</p>
-                    </br>
-                    <input type="button" id="entrar-btn" value="Entrar" required>
+                    <br>
+                    <button type="button" id="entrar-btn">Entrar</button>
                 </div>
             </form>
         </div>
     </main>
-    <script src="/public/pages/cadastro/script.js"></script>
+    <script type="module" src="/views/cadastro/script.js"></script>
 </body>
-<footer>
-</footer>
+
+</html>

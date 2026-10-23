@@ -13,8 +13,23 @@
 
 ## Tecnologias
 
-- html, css e js puro
-- node (talvez)
+- HTML, CSS e JavaScript puro
+- Node.js 24 LTS e npm para as ferramentas de desenvolvimento
+- Vite para desenvolvimento local e build de produção
+- ESLint, Stylelint e HTML Validate para análise estática
+
+## Execução local
+
+```bash
+npm ci
+npm run dev
+```
+
+Para executar todas as verificações usadas pelo CI:
+
+```bash
+npm run check
+```
 
 ## Documentação
 
@@ -71,7 +86,7 @@ D Fibrosync/
 │   │       ├── P logo_icone.png
 │   │       ├── P logo_texto.png
 │   │       └── P logo-removebg-preview.png
-│   └── D pages/                           # uma pasta por tela
+│   └── D views/                           # uma pasta por tela
 │       ├── D cadastro/
 │       │   ├── F index.html
 │       │   ├── F script.js

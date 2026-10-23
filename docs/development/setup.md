@@ -1,43 +1,47 @@
-<!-- esqueleto de arquivo, ainda tem que definir com o a prof como será a entrega de dados -->
 # Configuração do ambiente
-
-// A definir
 
 ## Pré-requisitos
 
 | Ferramenta | Versão | Finalidade |
 |---|---|---|
-| — | A definir | — |
+| Node.js | 24 LTS | Executar as ferramentas de desenvolvimento e o build |
+| npm | Incluído no Node.js | Instalar dependências e executar scripts |
+
+A versão principal do Node.js também está registrada no arquivo `.nvmrc`.
 
 ## Instalação
 
 ```bash
-# A definir após a escolha da stack, possivelmente node com pnpm (tem que ver com o ronaldo).
+npm ci
 ```
 
-## Variáveis de ambiente
-
-`.env.example`
-
-| Variável | Obrigatória | Descrição | Exemplo seguro |
-|---|---|---|---|
-| — | — | A definir | — |
-
+O `package-lock.json` deve ser mantido no repositório. O comando `npm ci` garante que o ambiente local e o CI usem exatamente as mesmas versões resolvidas.
 
 ## Execução local
 
 ```bash
-# A definir.
+npm run dev
+```
+
+O Vite inicia o servidor de desenvolvimento e abre a landing page. Para conferir o resultado de produção:
+
+```bash
+npm run build
+npm run preview
 ```
 
 ## Verificações
 
 ```bash
-# lint
-# testes
-# build
+npm run lint       # valida HTML, CSS e JavaScript
+npm run build      # gera os arquivos de produção em dist/
+npm run check      # executa todas as verificações do CI
 ```
 
-## Problemas conhecidos
+## Integração contínua
 
-- Nenhum problema registrado.
+O workflow `.github/workflows/ci.yml` executa `npm ci` e `npm run check` em Pull Requests e em pushes para a branch `main`.
+
+## Variáveis de ambiente
+
+O frontend atual não requer variáveis de ambiente.

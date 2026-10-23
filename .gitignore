@@ -1,2 +1,4 @@
 .more/
 todo.md
+node_modules/
+dist/

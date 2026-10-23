@@ -6,16 +6,14 @@
     --rosa-claro: #F7A8D8;
     --ciano-claro: #A8F3F5;
     --lilas: #C58AC5;
-    --preto: #000000;
-    --branco: #FFFFFF;
+    --preto: #000;
+    --branco: #FFF;
     --texto: #1A1A1A;
     --texto-suave: #4B4B57;
     --fundo-suave: #F8F9FB;
     --borda: #E7E7EE;
-
     --fonte-titulo: "Outfit", system-ui, sans-serif;
     --fonte-texto: "Inter", system-ui, sans-serif;
-
     --largura-max: 1180px;
     --raio: 14px;
 }
@@ -82,7 +80,7 @@ a {
 
 .botao:hover {
     transform: translateY(-2px);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+    box-shadow: 0 8px 20px rgb(0 0 0 / 12%);
 }
 
 .botao:focus-visible,
@@ -136,7 +134,6 @@ a {
     font-weight: 700;
     letter-spacing: -0.01em;
     background: linear-gradient(90deg, var(--roxo) 0%, var(--roxo) 40%, var(--ciano) 100%);
-    -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
 }
@@ -192,7 +189,6 @@ a {
     font-weight: 600;
     line-height: 1.25;
     background: linear-gradient(90deg, var(--ciano) 0%, var(--roxo) 55%, var(--roxo-escuro) 100%);
-    -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
 }
@@ -245,13 +241,13 @@ a {
     background: var(--branco);
     border: 1px solid var(--borda);
     border-radius: var(--raio);
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06);
+    box-shadow: 0 2px 6px rgb(0 0 0 / 6%);
     transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 .card:hover {
     transform: translateY(-4px);
-    box-shadow: 0 12px 28px rgba(123, 26, 140, 0.1);
+    box-shadow: 0 12px 28px rgb(123 26 140 / 10%);
 }
 
 .card-icone {
@@ -498,7 +494,7 @@ a {
 
 /* Responsividade */
 
-@media (max-width: 960px) {
+@media (width <= 960px) {
     .menu-botao {
         display: flex;
         flex-direction: column;
@@ -508,7 +504,7 @@ a {
         height: 44px;
         padding: 10px;
         border-radius: 10px;
-        background: rgba(255, 255, 255, 0.7);
+        background: rgb(255 255 255 / 70%);
         cursor: pointer;
     }
 
@@ -530,7 +526,7 @@ a {
         padding: 20px;
         background: var(--branco);
         border-radius: var(--raio);
-        box-shadow: 0 12px 32px rgba(0, 0, 0, 0.12);
+        box-shadow: 0 12px 32px rgb(0 0 0 / 12%);
         display: none;
     }
 
@@ -590,7 +586,7 @@ a {
     }
 }
 
-@media (max-width: 560px) {
+@media (width <= 560px) {
     .container {
         padding: 0 16px;
     }

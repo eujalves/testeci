@@ -147,7 +147,7 @@ loginForm.addEventListener("submit", (event) => {
             "Login realizado com sucesso!";
 
         // Redireciona para o painel
-        window.location.href = "dashboard.html";
+        window.location.href = "/views/landing-page/index.html";
 
     } else {
         loginMessage.style.color = "#d62965";

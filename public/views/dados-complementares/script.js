@@ -99,7 +99,7 @@ document.addEventListener("DOMContentLoaded", () => {
             // isso vale para as duas paginas (cadastro e dados-complementares)
 //fui eu que escrevi, viu vanessa
 
-        window.location.href = "/public/pages/home/index.html";
+        window.location.href = "/views/landing-page/index.html";
     });
 
     atualizarCampoData();

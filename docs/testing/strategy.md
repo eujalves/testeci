@@ -23,9 +23,11 @@
 ## Execução
 
 ```bash
-# Comandos a definir após a escolha das ferramentas de teste.
+npm run lint
+npm run build
+npm run check
 ```
 
 ## Integração contínua
 
-Os testes automatizados farão parte do workflow de CI quando _(se)_ a stack e os comandos do projeto estiverem definidos.
+O workflow de CI valida HTML, CSS e JavaScript e executa o build de produção em cada Pull Request e push para `main`. Testes unitários e ponta a ponta serão adicionados quando o projeto tiver regras de negócio e fluxos estáveis para automatizar.

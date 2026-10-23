@@ -25,7 +25,7 @@ body {
     min-height: 100dvh;
     background: var(--rosa-fundo);
     color: var(--texto);
-    font-family: "Poppins", Arial, Helvetica, sans-serif;
+    font-family: Poppins, Arial, Helvetica, sans-serif;
 }
 
 button,
@@ -317,7 +317,7 @@ select {
     margin-top: 0;
 }
 
-@media (min-width: 701px) and (max-height: 1050px) {
+@media (width >= 701px) and (height <= 1050px) {
     .pagina-cadastro {
         padding: 24px;
     }
@@ -374,7 +374,7 @@ select {
     }
 }
 
-@media (min-width: 701px) and (max-height: 820px) {
+@media (width >= 701px) and (height <= 820px) {
     .pagina-cadastro {
         padding: 16px 24px;
     }
@@ -449,7 +449,7 @@ select {
     }
 }
 
-@media (min-width: 701px) and (max-height: 650px) {
+@media (width >= 701px) and (height <= 650px) {
     .pagina-cadastro {
         padding: 8px 24px;
     }
@@ -520,7 +520,7 @@ select {
     }
 }
 
-@media (max-width: 700px) {
+@media (width <= 700px) {
     .pagina-cadastro {
         padding: 0;
     }
@@ -577,7 +577,7 @@ select {
     }
 }
 
-@media (max-width: 390px) {
+@media (width <= 390px) {
     .container {
         padding-inline: 16px;
     }
